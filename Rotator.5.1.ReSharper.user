@@ -1,0 +1,211 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="bool" priority="0" />
+      <Item value="string" priority="5" />
+      <Item value="String`0" priority="6" />
+      <Item value="jQueryHostSetting" priority="2" />
+      <Item value="jQueryBool" priority="2" />
+      <Item value="HostSettingsController`0" priority="0" />
+      <Item value="hostSettingsController" priority="1" />
+      <Item value="new" priority="6" />
+      <Item value="HostSettingsController" priority="0" />
+      <Item value="ModuleSettingNames`0" priority="2" />
+      <Item value="System" priority="2" />
+      <Item value="Data" priority="0" />
+      <Item value="IDataReader`0" priority="0" />
+      <Item value="test" priority="0" />
+      <Item value="Page" priority="13" />
+      <Item value="script" priority="2" />
+      <Item value="HtmlGenericControl`0" priority="3" />
+      <Item value="HtmlControl`0" priority="0" />
+      <Item value="hgc" priority="0" />
+      <Item value="HtmlDocument" priority="0" />
+      <Item value="using" priority="0" />
+      <Item value="Web" priority="0" />
+      <Item value="UI" priority="0" />
+      <Item value="HtmlElement" priority="0" />
+      <Item value="ConfigXmlDocument`0" priority="0" />
+      <Item value="WriteUTF8ResourceString`0" priority="0" />
+      <Item value="this" priority="2" />
+      <Item value="Page`0" priority="0" />
+      <Item value="CodeConstructType`0" priority="0" />
+      <Item value="HtmlGenericControl" priority="0" />
+      <Item value="as" priority="0" />
+      <Item value="body" priority="1" />
+      <Item value="if" priority="1" />
+      <Item value="jsKey" priority="1" />
+      <Item value="jsCyclePath" priority="0" />
+      <Item value="false" priority="0" />
+      <Item value="jsCycleScript" priority="0" />
+      <Item value="jsEasingSCript" priority="0" />
+      <Item value="jsCycleKey" priority="1" />
+      <Item value="jsEasingKey" priority="0" />
+      <Item value="PortalModuleBase`0" priority="0" />
+      <Item value="ModulePath" priority="0" />
+      <Item value="Response" priority="0" />
+      <Item value="txtThumbnail" priority="4" />
+      <Item value="slide" priority="11" />
+      <Item value="jsString" priority="1" />
+      <Item value="HttpUtility`0" priority="0" />
+      <Item value="Server" priority="0" />
+      <Item value="Uri`0" priority="0" />
+      <Item value="ModuleId" priority="1" />
+      <Item value="StringBuilder`0" priority="0" />
+      <Item value="StringBuilder" priority="0" />
+      <Item value="foreach" priority="0" />
+      <Item value="var" priority="1" />
+      <Item value="Slide`0" priority="2" />
+      <Item value="in" priority="0" />
+      <Item value="Slides`0" priority="0" />
+      <Item value="Slides" priority="0" />
+      <Item value="_slides" priority="1" />
+      <Item value="List" priority="1" />
+      <Item value="pager" priority="1" />
+      <Item value="pagerText" priority="0" />
+      <Item value="slideNumber" priority="1" />
+      <Item value="defaultDnnEditorCrap" priority="1" />
+      <Item value="else" priority="0" />
+      <Item value="slides" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="IsNullOrEmpty`0" priority="3" />
+      <Item value="Format`0" priority="2" />
+      <Item value="Empty" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="ToLower`0" priority="0" />
+      <Item value="Replace`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DotNetNuke.Entities.Host.HostSettingsController">
+      <Item value="GetHostSetting`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@DNNspot.Rotator.ModuleSettingNames">
+      <Item value="NoJQuery" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.IDataReader">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.Page">
+      <Item value="ClientScript" priority="3" />
+      <Item value="Form" priority="5" />
+      <Item value="FindControl`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.HtmlControls.HtmlForm">
+      <Item value="Controls" priority="1" />
+      <Item value="InnerHtml" priority="4" />
+      <Item value="DefaultFocus" priority="0" />
+      <Item value="InnerText" priority="0" />
+      <Item value="Action" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.ClientScriptManager">
+      <Item value="RegisterStartupScript`0" priority="1" />
+      <Item value="IsStartupScriptRegistered`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.HtmlControls.HtmlGenericControl">
+      <Item value="Controls" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.ControlCollection">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DNNspot.Rotator.Default">
+      <Item value="GetType`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DotNetNuke.UI.UserControls.TextEditor">
+      <Item value="Text" priority="2" />
+      <Item value="Mode" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DNNspot.Rotator.DataModel.Slide">
+      <Item value="Thumbnail" priority="11" />
+      <Item value="Id" priority="1" />
+      <Item value="Title" priority="0" />
+      <Item value="IsVisible" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Text.StringBuilder">
+      <Item value="Append`0" priority="2" />
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.HttpUtility">
+      <Item value="HtmlEncode`0" priority="0" />
+      <Item value="HtmlDecode`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpServerUtility">
+      <Item value="HtmlEncode`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Uri">
+      <Item value="EscapeDataString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Nullable`1">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="d:Miscellaneous Files/f:web.config/l:C!?inetpub?wwwroot?DNN514?web.config" caret="0" fromTop="0" />
+      <File id="8FB51F0E-4C71-4115-A237-19BD65F056BC/d:Generated/f:Template.cs" caret="0" fromTop="0" />
+      <File id="8FB51F0E-4C71-4115-A237-19BD65F056BC/d:Generated/f:Slide.cs" caret="790" fromTop="20" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx" caret="0" fromTop="0" />
+      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:Constants.cs" caret="0" fromTop="0" />
+      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:ModuleBase.cs" caret="884" fromTop="20" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="884" fromTop="20" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="884" fromTop="20" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:ListSlides.ascx" caret="0" fromTop="0" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:ListSlides.ascx.cs" caret="884" fromTop="20" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:ListTemplates.ascx.cs" caret="884" fromTop="20" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx.cs" caret="884" fromTop="20" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="1122" fromTop="22" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx" caret="770" fromTop="14" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx.cs" caret="3051" fromTop="27" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="1052" fromTop="6" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="2230" fromTop="43" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="3275" fromTop="30" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="3384" fromTop="38" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="3459" fromTop="29" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="15678" fromTop="29" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="15678" fromTop="33" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="10056" fromTop="34" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="11619" fromTop="17" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="11990" fromTop="25" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="12507" fromTop="12" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="12937" fromTop="17" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="4136" fromTop="13" />
+      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:Constants.cs" caret="884" fromTop="20" />
+      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:ModuleBase.cs" caret="0" fromTop="0" />
+      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:ModuleBase.cs" caret="884" fromTop="20" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="0" fromTop="0" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="884" fromTop="20" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="0" fromTop="0" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="884" fromTop="20" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx.cs" caret="884" fromTop="20" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:ListSlides.ascx.cs" caret="884" fromTop="20" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:ListTemplates.ascx.cs" caret="884" fromTop="20" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx.cs" caret="884" fromTop="20" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx" caret="242" fromTop="3" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx" caret="1721" fromTop="19" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="1122" fromTop="22" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx" caret="1054" fromTop="18" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx" caret="770" fromTop="14" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx.cs" caret="3051" fromTop="27" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

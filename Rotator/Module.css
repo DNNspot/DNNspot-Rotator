@@ -1,0 +1,112 @@
+﻿.error
+{
+	font-style: italic;
+	color: #00FFFF;
+	font-weight: bold;
+}
+
+table.TabularData
+{
+	border: 1px solid #666666;
+}
+
+table.TabularData tr th
+{
+	background: #888888;
+	color: #FFFFFF;
+	padding: 5px;
+}
+
+table.TabularData tr td
+{
+	background: #FFFFFF;
+	padding: 5px;
+}
+
+table.TabularData tr.TableRowAlt td
+{
+	background: #EEEEEE;
+}
+
+.ModuleTitle_SubMenu
+{
+	z-index: 1000;
+}
+
+
+
+/*-----------------------------------------------------------------
+					Template One
+--------------------------------------------------------------------*/
+
+.DNNSpotTemplateOne .prev_small a
+{
+	background: url("images/template1/prev.png") no-repeat scroll 0 0 transparent;
+	clear: both;
+	float: left;
+	height: 32px;
+	margin: 0 10px 0 25px;
+	outline: 0;
+	position: relative;
+	text-indent: -10000px;
+	top: 100px;
+	width: 34px;
+}
+
+.DNNSpotTemplateOne .slides
+{
+	float: left;
+}
+
+.DNNSpotTemplateOne .next_small a
+{
+	background: url("images/template1/next.png") no-repeat scroll 0 0 transparent;
+	float: left;
+	height: 32px;
+	margin: 0 10px;
+	outline: 0;
+	position: relative;
+	text-indent: -10000px;
+	top: 100px;
+	width: 34px;
+}
+
+
+/*-----------------------------------------------------------------
+					Template One
+--------------------------------------------------------------------*/
+.DNNspotTemplateTwo .pager, .DNNspotTemplateTwo .previousNav, .DNNspotTemplateTwo .nextNav 
+{
+	float:left;
+}
+
+.DNNspotTemplateTwo .pager ul 
+{
+	margin:0px;
+	padding:0px;
+}
+
+.DNNspotTemplateTwo .pager li
+{
+	background: none repeat scroll 0 0 #FFFFFF;
+	border-right: 1px solid #DDDDDD;
+	color: #FFFFFF;
+	float: left;
+	list-style: none outside none;
+	margin:0px;
+	outline:0;
+	padding: 2px 8px;
+	position: relative;
+	z-index: 10;
+}
+.DNNspotTemplateTwo .previousNav a, .DNNspotTemplateTwo .nextNav a
+{
+	background: none repeat scroll 0 0 #999999;
+	display: block;
+	outline:0;
+	padding: 2px 8px;
+	position: relative;
+	text-indent: -10000px;
+	width: 10px;
+	z-index: 10;
+}

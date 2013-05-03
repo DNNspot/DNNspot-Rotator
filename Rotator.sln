@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModel", "DataModel\DataModel.csproj", "{8FB51F0E-4C71-4115-A237-19BD65F056BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rotator", "Rotator\Rotator.csproj", "{7419998F-011F-4A60-A411-E210D10C20E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{D021C381-7764-4D13-B687-EE40A227E3A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FB51F0E-4C71-4115-A237-19BD65F056BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FB51F0E-4C71-4115-A237-19BD65F056BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FB51F0E-4C71-4115-A237-19BD65F056BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FB51F0E-4C71-4115-A237-19BD65F056BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7419998F-011F-4A60-A411-E210D10C20E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7419998F-011F-4A60-A411-E210D10C20E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7419998F-011F-4A60-A411-E210D10C20E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7419998F-011F-4A60-A411-E210D10C20E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D021C381-7764-4D13-B687-EE40A227E3A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D021C381-7764-4D13-B687-EE40A227E3A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D021C381-7764-4D13-B687-EE40A227E3A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D021C381-7764-4D13-B687-EE40A227E3A2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
