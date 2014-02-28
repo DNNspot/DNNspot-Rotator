@@ -23,6 +23,8 @@
 * Full license viewable here: http://www.gnu.org/licenses/gpl-2.0.txt
 */
 
+using System;
+
 namespace DNNspot.Rotator.Common
 {
     public static class ControlKeys
@@ -32,6 +34,8 @@ namespace DNNspot.Rotator.Common
         public const string Slides = "Slides";
         public const string Template = "Template";
         public const string Templates = "Templates";
+
+        [Obsolete]
         public const string License = "License";
     }
 

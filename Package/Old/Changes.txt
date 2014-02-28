@@ -1,0 +1,18 @@
+DNNspot-Content Rotator
+Changes Log
+--------------------------------------------------------------------
+
+Version: 01.01.02
+
+-Added classes on pager for first and last list items
+-Added classes prevSlide and lastSlide on the pager that move with the activeSlide class to signify which slide was just shown and which slide comes next
+-Added functionality for the tokens [PLAY], [PAUSE], [PAUSEPLAY], [NEXT], [PREV]
+-Removed qualifiers out of the SQL script
+
+
+
+
+Version: 01.01.03
+
+-Switched from SubSonic to Entity Space to enable support for object qualifiers
+-Removed DNN5 package. One package now works for both DNN 4 and DNN 5.

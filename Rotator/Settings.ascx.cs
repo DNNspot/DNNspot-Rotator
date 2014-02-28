@@ -79,12 +79,22 @@ namespace DNNspot.Rotator
             if (ModuleSettings[ModuleSettingNames.TemplateId] != null && ddlTemplates.Items.FindByValue(Convert.ToString(ModuleSettings[ModuleSettingNames.TemplateId])) != null)
                 ddlTemplates.Items.FindByValue(Convert.ToString(ModuleSettings[ModuleSettingNames.TemplateId])).Selected = true;
 
+            ddlVisibleCarouselSlides.DataSource = Enumerable.Range(1, 100);
+            ddlVisibleCarouselSlides.DataBind();
+
+            if (ModuleSettings[ModuleSettingNames.VisibleCarouselSlides] != null)
+                ddlVisibleCarouselSlides.Items.FindByValue(Convert.ToString(ModuleSettings[ModuleSettingNames.VisibleCarouselSlides])).Selected = true;
+
             if (ModuleSettings[ModuleSettingNames.TransitionEffect] != null)
             {
                 string[] values = Convert.ToString(ModuleSettings[ModuleSettingNames.TransitionEffect]).Split(',');
                 foreach (string a in values)
                 {
-                    ddlTransitionEffect.Items.FindByValue(a).Selected = true;
+                    var effectValue = ddlTransitionEffect.Items.FindByValue(a);
+                    if (effectValue != null)
+                    {
+                        effectValue.Selected = true;
+                    }
                 }
             }
             else
@@ -98,19 +108,20 @@ namespace DNNspot.Rotator
             if (ModuleSettings[ModuleSettingNames.EaseOutEffect] != null)
                 ddlEaseOutEffect.Items.FindByValue(Convert.ToString(ModuleSettings[ModuleSettingNames.EaseOutEffect])).Selected = true;
 
-            txtSpeedIn.Text = Convert.ToString(ModuleSettings[ModuleSettingNames.SpeedIn]);
-            txtSpeedOut.Text = Convert.ToString(ModuleSettings[ModuleSettingNames.SpeedOut]);
+            //txtSpeedIn.Text = Convert.ToString(ModuleSettings[ModuleSettingNames.SpeedIn]);
+            //txtSpeedOut.Text = Convert.ToString(ModuleSettings[ModuleSettingNames.SpeedOut]);
+            txtSpeed.Text = Convert.ToString(ModuleSettings[ModuleSettingNames.Speed]);
             txtTimeout.Text = Convert.ToString(ModuleSettings[ModuleSettingNames.Timeout]);
             txtHeight.Text = Convert.ToString(ModuleSettings[ModuleSettingNames.Height]);
             txtDelay.Text = Convert.ToString(ModuleSettings[ModuleSettingNames.Delay]);
             chkPause.Checked = ModuleSettings[ModuleSettingNames.Pause] != null;
             chkRandom.Checked = ModuleSettings[ModuleSettingNames.Random] != null;
-            chkSyncOff.Checked = ModuleSettings[ModuleSettingNames.SyncOff] != null;
-            chkRandomTransitions.Checked = ModuleSettings[ModuleSettingNames.RandomizeTransitions] != null;
-            chkLoop.Checked = ModuleSettings[ModuleSettingNames.Loop] != null;
-            txtNumberOfTransitions.Text = Convert.ToString(ModuleSettings[ModuleSettingNames.NumberOfTransitions]);
+            chkSyncOff.Checked = ModuleSettings[ModuleSettingNames.Sync] != null;
+            //chkRandomTransitions.Checked = ModuleSettings[ModuleSettingNames.RandomizeTransitions] != null;
+            chkLoop.Checked = ModuleSettings[ModuleSettingNames.Loop] != null ? false : true;
+            //txtNumberOfTransitions.Text = Convert.ToString(ModuleSettings[ModuleSettingNames.NumberOfTransitions]);
             txtSlideStart.Text = Convert.ToString(ModuleSettings[ModuleSettingNames.SlideStart]);
-            chkNoJQuery.Checked = !string.IsNullOrEmpty(HostSettings.GetHostSetting(ModuleSettingNames.NoJQuery));
+            //chkNoJQuery.Checked = !string.IsNullOrEmpty(HostSettings.GetHostSetting(ModuleSettingNames.NoJQuery));
 
         }
 
@@ -125,18 +136,16 @@ namespace DNNspot.Rotator
                     moduleController.UpdateModuleSetting(ModuleId, ModuleSettingNames.TemplateId, ddlTemplates.SelectedValue);
                 else
                     moduleController.DeleteModuleSetting(ModuleId, ModuleSettingNames.TemplateId);
-                
+
+                if (ddlVisibleCarouselSlides.SelectedIndex != 0)
+                    moduleController.UpdateModuleSetting(ModuleId, ModuleSettingNames.VisibleCarouselSlides, ddlVisibleCarouselSlides.SelectedValue);
+                else
+                    moduleController.DeleteModuleSetting(ModuleId, ModuleSettingNames.VisibleCarouselSlides);
+
                 if (ddlTransitionEffect.SelectedValue != "")
                 {
-                    string values = String.Empty;
+                    string values = ddlTransitionEffect.Items.Cast<ListItem>().Where(lst => lst.Selected == true).Aggregate(String.Empty, (current, lst) => current + (lst.Value + ","));
 
-                    foreach (ListItem lst in ddlTransitionEffect.Items)
-                    {
-                        if (lst.Selected == true)
-                        {
-                            values += lst.Value + ",";
-                        }
-                    }
                     values = values.TrimEnd(',');
                     moduleController.UpdateModuleSetting(ModuleId, ModuleSettingNames.TransitionEffect, values);
                 }
@@ -153,15 +162,20 @@ namespace DNNspot.Rotator
                 else
                     moduleController.DeleteModuleSetting(ModuleId, ModuleSettingNames.EaseOutEffect);
 
-                if (!String.IsNullOrEmpty(txtSpeedIn.Text))
-                    moduleController.UpdateModuleSetting(ModuleId, ModuleSettingNames.SpeedIn, txtSpeedIn.Text);
-                else
-                    moduleController.DeleteModuleSetting(ModuleId, ModuleSettingNames.SpeedIn);
+                //if (!String.IsNullOrEmpty(txtSpeedIn.Text))
+                //    moduleController.UpdateModuleSetting(ModuleId, ModuleSettingNames.SpeedIn, txtSpeedIn.Text);
+                //else
+                moduleController.DeleteModuleSetting(ModuleId, ModuleSettingNames.SpeedIn);
 
-                if (!String.IsNullOrEmpty(txtSpeedOut.Text))
-                    moduleController.UpdateModuleSetting(ModuleId, ModuleSettingNames.SpeedOut, txtSpeedOut.Text);
+                //if (!String.IsNullOrEmpty(txtSpeedOut.Text))
+                //    moduleController.UpdateModuleSetting(ModuleId, ModuleSettingNames.SpeedOut, txtSpeedOut.Text);
+                //else
+                moduleController.DeleteModuleSetting(ModuleId, ModuleSettingNames.SpeedOut);
+
+                if (!String.IsNullOrEmpty(txtSpeed.Text))
+                    moduleController.UpdateModuleSetting(ModuleId, ModuleSettingNames.Speed, txtSpeed.Text);
                 else
-                    moduleController.DeleteModuleSetting(ModuleId, ModuleSettingNames.SpeedOut);
+                    moduleController.DeleteModuleSetting(ModuleId, ModuleSettingNames.Speed);
 
                 if (!String.IsNullOrEmpty(txtTimeout.Text))
                     moduleController.UpdateModuleSetting(ModuleId, ModuleSettingNames.Timeout, txtTimeout.Text);
@@ -184,24 +198,24 @@ namespace DNNspot.Rotator
                     moduleController.DeleteModuleSetting(ModuleId, ModuleSettingNames.Random);
 
                 if (chkSyncOff.Checked)
-                    moduleController.UpdateModuleSetting(ModuleId, ModuleSettingNames.SyncOff, chkSyncOff.Checked.ToString());
+                    moduleController.UpdateModuleSetting(ModuleId, ModuleSettingNames.Sync, chkSyncOff.Checked.ToString());
                 else
-                    moduleController.DeleteModuleSetting(ModuleId, ModuleSettingNames.SyncOff);
+                    moduleController.DeleteModuleSetting(ModuleId, ModuleSettingNames.Sync);
 
-                if (chkRandomTransitions.Checked)
-                    moduleController.UpdateModuleSetting(ModuleId, ModuleSettingNames.RandomizeTransitions, chkRandomTransitions.Checked.ToString());
-                else
-                    moduleController.DeleteModuleSetting(ModuleId, ModuleSettingNames.RandomizeTransitions);
+                //if (chkRandomTransitions.Checked)
+                //    moduleController.UpdateModuleSetting(ModuleId, ModuleSettingNames.RandomizeTransitions, chkRandomTransitions.Checked.ToString());
+                //else
+                moduleController.DeleteModuleSetting(ModuleId, ModuleSettingNames.RandomizeTransitions);
 
-                if (chkLoop.Checked)
-                    moduleController.UpdateModuleSetting(ModuleId, ModuleSettingNames.Loop, chkLoop.Checked.ToString());
+                if (!chkLoop.Checked)
+                    moduleController.UpdateModuleSetting(ModuleId, ModuleSettingNames.Loop, (!chkLoop.Checked).ToString());
                 else
                     moduleController.DeleteModuleSetting(ModuleId, ModuleSettingNames.Loop);
 
-                if (!String.IsNullOrEmpty(txtNumberOfTransitions.Text))
-                    moduleController.UpdateModuleSetting(ModuleId, ModuleSettingNames.NumberOfTransitions, txtNumberOfTransitions.Text);
-                else
-                    moduleController.DeleteModuleSetting(ModuleId, ModuleSettingNames.NumberOfTransitions);
+                //if (!String.IsNullOrEmpty(txtNumberOfTransitions.Text))
+                //    moduleController.UpdateModuleSetting(ModuleId, ModuleSettingNames.NumberOfTransitions, txtNumberOfTransitions.Text);
+                //else
+                moduleController.DeleteModuleSetting(ModuleId, ModuleSettingNames.NumberOfTransitions);
 
                 if (!String.IsNullOrEmpty(txtHeight.Text))
                     moduleController.UpdateModuleSetting(ModuleId, ModuleSettingNames.Height, txtHeight.Text);
@@ -213,10 +227,10 @@ namespace DNNspot.Rotator
                 else
                     moduleController.DeleteModuleSetting(ModuleId, ModuleSettingNames.SlideStart);
 
-                if (chkNoJQuery.Checked)
-                    hostSettingsController.UpdateHostSetting(ModuleSettingNames.NoJQuery, chkNoJQuery.Checked.ToString());
-                else
-                    hostSettingsController.UpdateHostSetting(ModuleSettingNames.NoJQuery, string.Empty);
+                //if (chkNoJQuery.Checked)
+                //    hostSettingsController.UpdateHostSetting(ModuleSettingNames.NoJQuery, chkNoJQuery.Checked.ToString());
+                //else
+                hostSettingsController.UpdateHostSetting(ModuleSettingNames.NoJQuery, string.Empty);
 
                 ModuleController.SynchronizeModule(ModuleId);
             }
@@ -232,22 +246,32 @@ namespace DNNspot.Rotator
     public static class ModuleSettingNames
     {
         public const string Delay = "Delay";
-        public const string EaseInEffect = "EaseInEffect";
-        public const string EaseOutEffect = "EaseOutEffect";
         public const string Pause = "Pause";
         public const string Random = "Random";
-        public const string SpeedIn = "SpeedIn";
-        public const string SpeedOut = "SpeedOut";
-        public const string SyncOff = "SyncOff";
+        public const string Sync = "Sync";
         public const string TemplateId = "TemplateId";
         public const string Timeout = "Timeout";
         public const string TransitionEffect = "TransitionEffect";
+        public const string VisibleCarouselSlides = "VisibleCarouselSlides";
         public const string Loop = "Loop";
-        public const string Height = "Height";
-        public const string RandomizeTransitions = "RandomizeTransitions";
-        public const string NumberOfTransitions = "NumberOfTransitions";
         public const string SlideStart = "SlideStart";
-        public const string SerialNumber = "DNNspot_Rotator_SerialNumber";
+        public const string EaseInEffect = "EaseInEffect";
+        public const string EaseOutEffect = "EaseOutEffect";
+        public const string Speed = "Speed";
+
+        [Obsolete]
+        public const string Height = "Height";
+        [Obsolete]
         public const string NoJQuery = "DNNspot_Rotator_NoJQuery";
+        [Obsolete]
+        public const string SpeedIn = "SpeedIn";
+        [Obsolete]
+        public const string SerialNumber = "DNNspot_Rotator_SerialNumber";
+        [Obsolete]
+        public const string SpeedOut = "SpeedOut";
+        [Obsolete]
+        public const string RandomizeTransitions = "RandomizeTransitions";
+        [Obsolete]
+        public const string NumberOfTransitions = "NumberOfTransitions";
     }
 }

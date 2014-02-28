@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dotnetnuke version="3.0" type="Module">
+	<folders>
+		<folder>
+			<name>DNNspot-Rotator</name>
+			<friendlyname>DNNspot Rotator</friendlyname>
+			<foldername>DNNspot-Rotator</foldername>
+			<modulename>DNNspot-Rotator</modulename>
+			<description>Create "slides" of content to rotate through using nice AJAX effects.</description>
+			<version>01.01.04</version>	
+			<resourcefile>Resources.zip</resourcefile>
+			<modules>
+				<module>
+					<friendlyname>DNNspot-Rotator</friendlyname>
+					<controls>
+						<control>
+							<src>Default.ascx</src>
+							<type>View</type>
+						</control>
+						<control>
+							<key>Settings</key>
+							<title>Rotator Settings</title>
+							<src>Settings.ascx</src>
+							<type>Edit</type>
+						</control>
+						<control>
+							<key>Slides</key>
+							<title>Edit Slides</title>
+							<src>ListSlides.ascx</src>
+							<type>Edit</type>
+						</control>
+						<control>
+							<key>Slide</key>
+							<title>Edit Slide</title>
+							<src>EditSlide.ascx</src>
+							<type>Edit</type>
+						</control>
+						<control>
+							<key>Templates</key>
+							<title>Edit Templates</title>
+							<src>ListTemplates.ascx</src>
+							<type>Edit</type>
+						</control>
+						<control>
+							<key>Template</key>
+							<title>Edit Template</title>
+							<src>EditTemplate.ascx</src>
+							<type>Edit</type>
+						</control>
+						<control>
+							<key>License</key>
+							<title>License</title>
+							<src>License.ascx</src>
+							<type>Edit</type>
+						</control>						
+					</controls>
+				</module>
+			</modules>
+		<files>
+			<file>
+				<name>01.01.00.SqlDataProvider</name>
+			</file>
+			<file>
+				<name>uninstall.SqlDataProvider</name>
+			</file>
+			<file>
+				<path>bin</path>
+				<name>DNNspot.Rotator.dll</name>
+			</file>
+			<file>
+				<path>bin</path>
+				<name>DNNspot.Rotator.Common.dll</name>
+			</file>
+			<file>
+				<path>bin</path>
+				<name>DNNspot.Rotator.DataModel.dll</name>
+			</file>
+			<file>
+				<path>bin</path>
+				<name>DNNspot.EntitySpaces.dll</name>
+			</file>
+			<file>
+				<path>bin</path>
+				<name>DNNspot.Licensing.ClientCommon.dll</name>
+			</file>			
+		</files>
+		</folder>
+	</folders>
+</dotnetnuke>

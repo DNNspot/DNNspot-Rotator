@@ -26,6 +26,7 @@
 using System;
 using System.Collections.Specialized;
 using System.Configuration;
+using System.Linq;
 using System.Web.UI.HtmlControls;
 using DotNetNuke.Entities.Modules;
 using DotNetNuke.Modules.Dashboard.Data;
@@ -87,10 +88,7 @@ namespace DNNspot.Rotator.Common
 
         protected bool IsAuthenticatedEditor()
         {
-            foreach (var role in ModuleConfiguration.AuthorizedEditRoles.Split(','))
-                if (UserInfo.IsInRole(role)) return true;
-
-            return false;
+            return ModuleConfiguration.AuthorizedEditRoles.Split(',').Any(role => UserInfo.IsInRole(role));
         }
 
         protected void RegisterJavascript(string fullPath)

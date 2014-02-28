@@ -14,36 +14,28 @@
             <span class="SubHead">Transition effect:</span>
         </td>
         <td>
-            <asp:CheckBoxList ID="ddlTransitionEffect" RepeatColumns="2" runat="server">
+            <asp:DropDownList ID="ddlTransitionEffect" RepeatColumns="2" runat="server">
+                <%--DEFAULT TRANSITIONS--%>
                 <asp:ListItem Text="None" Value="none"></asp:ListItem>
-                <asp:ListItem Text="Blind X" Value="blindX"></asp:ListItem>
-                <asp:ListItem Text="Blind Y" Value="blindY"></asp:ListItem>
-                <asp:ListItem Text="Blind Z" Value="blindZ"></asp:ListItem>
-                <asp:ListItem Text="Cover" Value="cover"></asp:ListItem>
-                <asp:ListItem Text="Curtain X" Value="curtainX"></asp:ListItem>
-                <asp:ListItem Text="Curtain Y" Value="curtainY"></asp:ListItem>
                 <asp:ListItem Text="Fade" Value="fade"></asp:ListItem>
-                <asp:ListItem Text="Fade Zoom" Value="fadeZoom"></asp:ListItem>
-                <asp:ListItem Text="Grow X" Value="growX"></asp:ListItem>
-                <asp:ListItem Text="Grow Y" Value="growY"></asp:ListItem>
-                <asp:ListItem Text="Scroll Up" Value="scrollUp"></asp:ListItem>
-                <asp:ListItem Text="Scroll Down" Value="scrollDown"></asp:ListItem>
-                <asp:ListItem Text="Scroll Left" Value="scrollLeft"></asp:ListItem>
-                <asp:ListItem Text="scroll Right" Value="scrollRight"></asp:ListItem>
+                <asp:ListItem Text="Fadeout" Value="fadeout"></asp:ListItem>
                 <asp:ListItem Text="Scroll Horizontally" Value="scrollHorz"></asp:ListItem>
+                <%--PLUGIN BASED TRANSITIONS--%>
+                <asp:ListItem Text="Carousel" Value="carousel"></asp:ListItem>
+                <asp:ListItem Text="Flip" Value="flipHorz"></asp:ListItem>
                 <asp:ListItem Text="Scroll Vertically" Value="scrollVert"></asp:ListItem>
                 <asp:ListItem Text="Shuffle" Value="shuffle"></asp:ListItem>
-                <asp:ListItem Text="Slide X" Value="slideX"></asp:ListItem>
-                <asp:ListItem Text="Slide Y" Value="slideY"></asp:ListItem>
-                <asp:ListItem Text="Toss" Value="toss"></asp:ListItem>
-                <asp:ListItem Text="Turn Up" Value="turnUp"></asp:ListItem>
-                <asp:ListItem Text="Turn Down" Value="turnDown"></asp:ListItem>
-                <asp:ListItem Text="Turn Left" Value="turnLeft"></asp:ListItem>
-                <asp:ListItem Text="Turn Right" Value="turnRight"></asp:ListItem>
-                <asp:ListItem Text="Uncover" Value="uncover"></asp:ListItem>
-                <asp:ListItem Text="Wipe" Value="wipe"></asp:ListItem>
-                <asp:ListItem Text="Zoom" Value="zoom"></asp:ListItem>
-            </asp:CheckBoxList>
+                <asp:ListItem Text="Tile" Value="tileSlide"></asp:ListItem>
+            </asp:DropDownList>
+        </td>
+    </tr>
+    <tr class="visibleCarouselSlides">
+        <td>
+            <span class="SubHead">Number of visible carousel slides:</span>
+        </td>
+        <td>
+            <asp:DropDownList ID="ddlVisibleCarouselSlides" RepeatColumns="2" runat="server">
+            </asp:DropDownList>
         </td>
     </tr>
     <tr>
@@ -124,108 +116,119 @@
     </tr>
     <tr>
         <td>
-            <span class="SubHead">Transition in speed:</span>
+            <span class="SubHead">Transition Speed:</span>
         </td>
         <td>
-            <asp:TextBox ID="txtSpeedIn" runat="server" Columns="5"></asp:TextBox>
+            <asp:TextBox ID="txtSpeed" runat="server" Columns="5"></asp:TextBox>
             milliseconds*
         </td>
-    </tr>
-    <tr>
-        <td>
-            <span class="SubHead">Transition out speed:</span>
-        </td>
-        <td>
-            <asp:TextBox ID="txtSpeedOut" runat="server" Columns="5"></asp:TextBox>
-            milliseconds*
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <span class="SubHead">Display each slide for:</span>
-        </td>
-        <td>
-            <asp:TextBox ID="txtTimeout" runat="server" Columns="5"></asp:TextBox>
-            milliseconds*
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <span class="SubHead">Change first slide after:</span>
-        </td>
-        <td>
-            <asp:TextBox ID="txtDelay" runat="server" Columns="5"></asp:TextBox>
-            milliseconds*
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2">
-            <sup>*1 second = 1000 milliseconds</sup>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2">
-            &nbsp;
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <span class="SubHead">Height:</span>
-        </td>
-        <td>
-            <asp:TextBox ID="txtHeight" runat="server" Columns="5"></asp:TextBox>pixels
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <span class="SubHead">Pause on hover:</span>
-        </td>
-        <td>
-            <asp:CheckBox ID="chkPause" runat="server" />
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <span class="SubHead">Randomize transitions:</span>
-        </td>
-        <td>
-            <asp:CheckBox ID="chkRandomTransitions" runat="server" />
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <span class="SubHead">Randomize slide order:</span>
-        </td>
-        <td>
-            <asp:CheckBox ID="chkRandom" runat="server" />
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <span class="SubHead">Disable simultaneous transitions:</span>
-        </td>
-        <td>
-            <asp:CheckBox ID="chkSyncOff" runat="server" />
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <span class="SubHead">Start on slide number:</span>
-        </td>
-        <td>
-            <asp:TextBox ID="txtSlideStart" Columns="5" runat="server" />
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <span class="SubHead">Autostop:</span>
-        </td>
-        <td>
-            <asp:CheckBox ID="chkLoop" runat="server" />
-            <span style="font-size:11px;">(Cycles through once, unless overwritten below)</span>
-        </td>
-    </tr>
-    <tr>
+        <tr>
+            <td>
+                <span class="SubHead">Display each slide for:</span>
+            </td>
+            <td>
+                <asp:TextBox ID="txtTimeout" runat="server" Columns="5"></asp:TextBox>
+                milliseconds*
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                <span class="SubHead">Change first slide after:</span>
+            </td>
+            <td valign="top">
+                <asp:TextBox ID="txtDelay" runat="server" Columns="5"></asp:TextBox>
+                milliseconds*
+                <br />
+                The number of milliseconds to add onto, or substract from "Display each slide for",
+                to determine the time before the first slide transition occurs.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <sup>*1 second = 1000 milliseconds</sup>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="SubHead">Auto-Height:</span>
+            </td>
+            <td>
+                <asp:TextBox ID="txtHeight" runat="server" Columns="5"></asp:TextBox>
+                <a class="moreInfoLink" href="javascript:void(0);">More Info...</a>
+                <div class="moreInfo" style="display:none;">
+                    <p>
+                        This option determines whether or not the Rotator will provide height management for
+                        the slideshow which can be very useful in fluid or responsive designs. By default, the Rotator will calculate the tallest slide and use that as the height. This setting can change that.</p>
+                    <p>
+                        There are two ways this option can be used, aside from the blank default to automatically calculate the height:
+                    </p>
+                    <ul>
+                        <li>Provide an integer to identify the zero-based slide index for a default slide to use as the height
+                            slide </li>
+                        <li>Use a ratio string which identifies the width:height aspect ratio for
+                            the container </li>
+                    </ul>
+                    <p>
+                        To force the slideshow container to a specific aspect ratio, for example to hold
+                        a set of images that are 600x400, use a ratio string like this:
+                    </p>
+                    <pre>data-cycle-auto-height="600:400"</pre>
+                    <p>
+                        To disable height management, set this option's value to <code>-1</code> or <code>false</code>.
+                    </p>
+                    <p>
+                       Source: <a href="http://jquery.malsup.com/cycle2/api/" target="_blank">http://jquery.malsup.com/cycle2/api/</a>
+                    </p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="SubHead">Pause on hover:</span>
+            </td>
+            <td>
+                <asp:CheckBox ID="chkPause" runat="server" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="SubHead">Randomize slide order:</span>
+            </td>
+            <td>
+                <asp:CheckBox ID="chkRandom" runat="server" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="SubHead">Disable simultaneous transitions:</span>
+            </td>
+            <td>
+                <asp:CheckBox ID="chkSyncOff" runat="server" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="SubHead">Start on slide number:</span>
+            </td>
+            <td>
+                <asp:TextBox ID="txtSlideStart" Columns="5" runat="server" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="SubHead">Loop:</span>
+            </td>
+            <td>
+                <asp:CheckBox ID="chkLoop" runat="server" />
+                <span style="font-size: 11px;">(Cycles through once, unless overwritten below)</span>
+            </td>
+        </tr>
+        <%--    <tr>
         <td>
             <span class="SubHead">Number of slides to show:</span>
         </td>
@@ -233,13 +236,22 @@
             <asp:TextBox ID="txtNumberOfTransitions" Columns="5" runat="server" />
             <span style="font-size:11px;">(used with the Autostop feature)</span>
         </td>
-    </tr>
-    <tr>
-        <td>
-            <span class="SubHead">Do not include jQuery:</span>
-        </td>
-        <td>
-            <asp:CheckBox ID="chkNoJQuery" runat="server" />
-        </td>
-    </tr>
+    </tr>--%>
 </table>
+<script type="text/javascript">
+    jQuery(function () {
+        jQuery("#<%= ddlTransitionEffect.ClientID %>").change(function () {
+            if (jQuery(this).val() == "carousel") {
+                jQuery(".visibleCarouselSlides").show();
+            } else {
+                jQuery(".visibleCarouselSlides").hide();
+            }
+        });
+
+        jQuery("#<%= ddlTransitionEffect.ClientID %>").trigger("change");
+
+        jQuery(".moreInfoLink").click(function () {
+            jQuery(this).next(".moreInfo").toggle();
+        });
+    });
+</script>

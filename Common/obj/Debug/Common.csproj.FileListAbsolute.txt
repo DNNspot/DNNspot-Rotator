@@ -9,3 +9,13 @@ C:\Code\DNNspot-Rotator\trunk\Common\bin\Debug\EntitySpaces.DynamicQuery.dll
 C:\Code\DNNspot-Rotator\trunk\Common\bin\Debug\EntitySpaces.Interfaces.dll
 C:\Code\DNNspot-Rotator\trunk\Common\bin\Debug\EntitySpaces.LoaderMT.dll
 C:\Code\DNNspot-Rotator\trunk\Common\bin\Debug\EntitySpaces.SqlClientProvider.dll
+C:\Code\OLD DNNSPOT\DNNspot-Rotator\trunk\Common\bin\Debug\DNNspot.Rotator.Common.dll
+C:\Code\OLD DNNSPOT\DNNspot-Rotator\trunk\Common\bin\Debug\DNNspot.Rotator.Common.pdb
+C:\Code\OLD DNNSPOT\DNNspot-Rotator\trunk\Common\bin\Debug\EntitySpaces.Core.dll
+C:\Code\OLD DNNSPOT\DNNspot-Rotator\trunk\Common\bin\Debug\EntitySpaces.DebuggerVisualizer.dll
+C:\Code\OLD DNNSPOT\DNNspot-Rotator\trunk\Common\bin\Debug\EntitySpaces.DynamicQuery.dll
+C:\Code\OLD DNNSPOT\DNNspot-Rotator\trunk\Common\bin\Debug\EntitySpaces.Interfaces.dll
+C:\Code\OLD DNNSPOT\DNNspot-Rotator\trunk\Common\bin\Debug\EntitySpaces.LoaderMT.dll
+C:\Code\OLD DNNSPOT\DNNspot-Rotator\trunk\Common\bin\Debug\EntitySpaces.SqlClientProvider.dll
+C:\Code\OLD DNNSPOT\DNNspot-Rotator\trunk\Common\obj\Debug\DNNspot.Rotator.Common.dll
+C:\Code\OLD DNNSPOT\DNNspot-Rotator\trunk\Common\obj\Debug\DNNspot.Rotator.Common.pdb

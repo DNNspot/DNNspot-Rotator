@@ -9,13 +9,13 @@
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
       <Item value="bool" priority="0" />
-      <Item value="string" priority="5" />
-      <Item value="String`0" priority="6" />
+      <Item value="string" priority="6" />
+      <Item value="String`0" priority="7" />
       <Item value="jQueryHostSetting" priority="2" />
       <Item value="jQueryBool" priority="2" />
       <Item value="HostSettingsController`0" priority="0" />
       <Item value="hostSettingsController" priority="1" />
-      <Item value="new" priority="6" />
+      <Item value="new" priority="7" />
       <Item value="HostSettingsController" priority="0" />
       <Item value="ModuleSettingNames`0" priority="2" />
       <Item value="System" priority="2" />
@@ -40,7 +40,7 @@
       <Item value="HtmlGenericControl" priority="0" />
       <Item value="as" priority="0" />
       <Item value="body" priority="1" />
-      <Item value="if" priority="1" />
+      <Item value="if" priority="4" />
       <Item value="jsKey" priority="1" />
       <Item value="jsCyclePath" priority="0" />
       <Item value="false" priority="0" />
@@ -57,7 +57,7 @@
       <Item value="HttpUtility`0" priority="0" />
       <Item value="Server" priority="0" />
       <Item value="Uri`0" priority="0" />
-      <Item value="ModuleId" priority="1" />
+      <Item value="ModuleId" priority="2" />
       <Item value="StringBuilder`0" priority="0" />
       <Item value="StringBuilder" priority="0" />
       <Item value="foreach" priority="0" />
@@ -67,28 +67,70 @@
       <Item value="Slides`0" priority="0" />
       <Item value="Slides" priority="0" />
       <Item value="_slides" priority="1" />
-      <Item value="List" priority="1" />
+      <Item value="List" priority="2" />
       <Item value="pager" priority="1" />
       <Item value="pagerText" priority="0" />
-      <Item value="slideNumber" priority="1" />
+      <Item value="slideNumber" priority="2" />
       <Item value="defaultDnnEditorCrap" priority="1" />
       <Item value="else" priority="0" />
       <Item value="slides" priority="0" />
+      <Item value="output" priority="3" />
+      <Item value="public" priority="0" />
+      <Item value="private" priority="0" />
+      <Item value="List&lt;string&gt;" priority="0" />
+      <Item value="_transitions" priority="1" />
+      <Item value="_transitionEffect" priority="0" />
+      <Item value="Obsolete" priority="2" />
+      <Item value="_delay" priority="0" />
+      <Item value="_syncOff" priority="0" />
+      <Item value="true" priority="2" />
+      <Item value="_random" priority="0" />
+      <Item value="effectValue" priority="2" />
+      <Item value="null" priority="0" />
+      <Item value="_timeout" priority="0" />
+      <Item value="_hasPager" priority="0" />
+      <Item value="_hasPlayButton" priority="0" />
+      <Item value="_hasPausePlayButton" priority="1" />
+      <Item value="Tokens`0" priority="3" />
+      <Item value="_pause" priority="0" />
+      <Item value="_hasPauseButton" priority="0" />
+      <Item value="_hasNextButton" priority="1" />
+      <Item value="_hasPreviousButton" priority="1" />
+      <Item value="_transitionSpeed" priority="1" />
+      <Item value="jsCycle" priority="0" />
+      <Item value="jsEasing" priority="0" />
+      <Item value="switch" priority="0" />
+      <Item value="case" priority="4" />
+      <Item value="break" priority="1" />
+      <Item value="jsCarousel" priority="0" />
+      <Item value="jsFlip" priority="0" />
+      <Item value="jsScrollVert" priority="0" />
+      <Item value="jsShuffle" priority="0" />
+      <Item value="default" priority="0" />
+      <Item value="jsIEFade" priority="0" />
+      <Item value="_visibleCarouselSlides" priority="0" />
+      <Item value="ddlVisibleCarouselSlides" priority="5" />
+      <Item value="_slideStart" priority="2" />
+      <Item value="Convert`0" priority="0" />
+      <Item value="_height" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.String">
       <Item value="IsNullOrEmpty`0" priority="3" />
-      <Item value="Format`0" priority="2" />
+      <Item value="Format`0" priority="3" />
       <Item value="Empty" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.String">
       <Item value="ToLower`0" priority="0" />
       <Item value="Replace`0" priority="0" />
+      <Item value="Contains`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:DotNetNuke.Entities.Host.HostSettingsController">
       <Item value="GetHostSetting`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@DNNspot.Rotator.ModuleSettingNames">
       <Item value="NoJQuery" priority="1" />
+      <Item value="TransitionSpeed" priority="1" />
+      <Item value="VisibleCarouselSlides" priority="5" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Data.IDataReader">
       <Item value="ToString`0" priority="0" />
@@ -129,7 +171,7 @@
       <Item value="IsVisible" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Text.StringBuilder">
-      <Item value="Append`0" priority="2" />
+      <Item value="Append`0" priority="9" />
       <Item value="ToString`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Web.HttpUtility">
@@ -145,57 +187,74 @@
     <ItemStatistics item="Qualified:System.Nullable`1">
       <Item value="ToString`0" priority="0" />
     </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.ListItem">
+      <Item value="Selected" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@DNNspot.Rotator.Tokens">
+      <Item value="Pager" priority="0" />
+      <Item value="Play" priority="0" />
+      <Item value="PausePlay" priority="0" />
+      <Item value="Pause" priority="0" />
+      <Item value="Next" priority="0" />
+      <Item value="Previous" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToBase64CharArray`0" priority="0" />
+      <Item value="ToInt32`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.DropDownList">
+      <Item value="DataSource" priority="0" />
+      <Item value="DataBind`0" priority="0" />
+      <Item value="ClientID" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="CompareTo`0" priority="2" />
+    </ItemStatistics>
   </CompletionStatisticsManager>
   <RecentFiles>
     <RecentFiles>
-      <File id="d:Miscellaneous Files/f:web.config/l:C!?inetpub?wwwroot?DNN514?web.config" caret="0" fromTop="0" />
       <File id="8FB51F0E-4C71-4115-A237-19BD65F056BC/d:Generated/f:Template.cs" caret="0" fromTop="0" />
       <File id="8FB51F0E-4C71-4115-A237-19BD65F056BC/d:Generated/f:Slide.cs" caret="790" fromTop="20" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx" caret="0" fromTop="0" />
+      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:ModuleBase.cs" caret="1278" fromTop="6" />
       <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:Constants.cs" caret="0" fromTop="0" />
-      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:ModuleBase.cs" caret="884" fromTop="20" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:ListSlides.ascx" caret="0" fromTop="0" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:ListSlides.ascx.cs" caret="884" fromTop="20" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:ListTemplates.ascx.cs" caret="884" fromTop="20" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx.cs" caret="884" fromTop="20" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx" caret="770" fromTop="14" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx.cs" caret="3051" fromTop="27" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="1040" fromTop="20" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="0" fromTop="0" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="2732" fromTop="15" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle.all.min.js" caret="0" fromTop="0" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.flip.min.js" caret="0" fromTop="0" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.scrollVert.min.js" caret="0" fromTop="0" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx.cs" caret="3113" fromTop="10" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="21259" fromTop="18" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx" caret="10054" fromTop="12" />
+      <File id="d:Miscellaneous Files/f:Settings.ascx/l:C!?inetpub?wwwroot?DNN7?DesktopModules?DNNspot-Rotator?Settings.ascx" caret="0" fromTop="0" />
     </RecentFiles>
     <RecentEdits>
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="1052" fromTop="6" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="2230" fromTop="43" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="3275" fromTop="30" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="3384" fromTop="38" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="3459" fromTop="29" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="15678" fromTop="29" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="15678" fromTop="33" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="10056" fromTop="34" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="11619" fromTop="17" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="11990" fromTop="25" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="12507" fromTop="12" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="12937" fromTop="17" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="4136" fromTop="13" />
-      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:Constants.cs" caret="884" fromTop="20" />
-      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:ModuleBase.cs" caret="0" fromTop="0" />
-      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:ModuleBase.cs" caret="884" fromTop="20" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="0" fromTop="0" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="884" fromTop="20" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="0" fromTop="0" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="884" fromTop="20" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx.cs" caret="884" fromTop="20" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:ListSlides.ascx.cs" caret="884" fromTop="20" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:ListTemplates.ascx.cs" caret="884" fromTop="20" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx.cs" caret="884" fromTop="20" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx" caret="242" fromTop="3" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx" caret="1721" fromTop="19" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="1122" fromTop="22" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx" caret="1054" fromTop="18" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx" caret="770" fromTop="14" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx.cs" caret="3051" fromTop="27" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="19197" fromTop="10" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx" caret="13107" fromTop="14" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx" caret="13107" fromTop="14" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx.cs" caret="4615" fromTop="16" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx.cs" caret="7245" fromTop="31" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx.cs" caret="7245" fromTop="19" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx.cs" caret="6661" fromTop="13" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx.cs" caret="6659" fromTop="14" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx.cs" caret="2590" fromTop="12" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx.cs" caret="4421" fromTop="23" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx.cs" caret="3113" fromTop="10" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx" caret="13107" fromTop="21" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx" caret="13107" fromTop="19" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx" caret="13107" fromTop="27" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="17017" fromTop="7" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="17380" fromTop="15" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="18262" fromTop="27" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx" caret="13107" fromTop="13" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="10349" fromTop="15" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="13631" fromTop="17" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="21302" fromTop="19" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx" caret="13107" fromTop="25" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx" caret="13107" fromTop="20" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx" caret="13107" fromTop="32" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx" caret="10820" fromTop="27" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx" caret="13060" fromTop="20" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx" caret="8987" fromTop="6" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx" caret="10180" fromTop="13" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx" caret="9783" fromTop="7" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx" caret="10054" fromTop="12" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>

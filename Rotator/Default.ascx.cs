@@ -1,4 +1,4 @@
-/*
+﻿/*
 * This software is licensed under the GNU General Public License, version 2
 * You may copy, distribute and modify the software as long as you track changes/dates of in source files and keep all modifications under GPL. You can distribute your application using a GPL library commercially, but you must also provide the source code.
 
@@ -45,6 +45,7 @@ namespace DNNspot.Rotator
         #region Members
 
         private string _delay;
+
         private string _easeInEffect;
         private string _easeOutEffect;
         private bool _hasNextButton;
@@ -55,13 +56,19 @@ namespace DNNspot.Rotator
         private bool _hasPreviousButton;
         private string _pause;
         private string _random;
+        private string _speed;
+
+        [Obsolete]
         private string _speedIn;
+        [Obsolete]
         private string _speedOut;
-        private string _syncOff;
+        private string _transitionSpeed;
+        private string _sync;
         private string _randomizeTransitions;
         private int? _templateId;
         private string _timeout;
         private string _transitionEffect;
+        private string _visibleCarouselSlides;
         private string _loop;
         private string _numberOfTransitions;
         private string _slideStart;
@@ -133,99 +140,99 @@ namespace DNNspot.Rotator
 
         private void GenerateJavascript()
         {
-            var jsString = new StringBuilder();
+            //var jsString = new StringBuilder();
 
-            if (_hasPager)
-            {
-                jsString.Append(String.Format("function slides_{0}_pagerAnchorBuilder(idx, slide) {{ ", ModuleId));
+            //if (_hasPager)
+            //{
+            //    jsString.Append(String.Format("function slides_{0}_pagerAnchorBuilder(idx, slide) {{ ", ModuleId));
 
-                jsString.Append(
-                    String.Format(
-                        "return 'ul#slides_{0}_pager li#slides_{0}_pager_' + idx + ' a'; ",
-                        ModuleId));
+            //    jsString.Append(
+            //        String.Format(
+            //            "return 'ul#slides_{0}_pager li#slides_{0}_pager_' + idx + ' a'; ",
+            //            ModuleId));
 
 
 
-                jsString.Append("} ");
+            //    jsString.Append("} ");
 
-                jsString.Append(String.Format("function slides_{0}_updateActivePagerLink(pager, currSlide) {{ ", ModuleId));
-                jsString.Append("jQuery(pager).find('li').removeClass('activeSlide').filter('li:eq('+currSlide+')').addClass('activeSlide'); ");
-                jsString.Append("jQuery(pager).find('li').removeClass('prevSlide').filter('li:eq('+currSlide+')').prev().addClass('prevSlide'); ");
-                jsString.Append("jQuery(pager).find('li').removeClass('nextSlide').filter('li:eq('+currSlide+')').next().addClass('nextSlide'); ");
-                jsString.Append("}; ");
-            }
+            //    jsString.Append(String.Format("function slides_{0}_updateActivePagerLink(pager, currSlide) {{ ", ModuleId));
+            //    jsString.Append("jQuery(pager).find('li').removeClass('activeSlide').filter('li:eq('+currSlide+')').addClass('activeSlide'); ");
+            //    jsString.Append("jQuery(pager).find('li').removeClass('prevSlide').filter('li:eq('+currSlide+')').prev().addClass('prevSlide'); ");
+            //    jsString.Append("jQuery(pager).find('li').removeClass('nextSlide').filter('li:eq('+currSlide+')').next().addClass('nextSlide'); ");
+            //    jsString.Append("}; ");
+            //}
 
-            jsString.Append("jQuery(function() { ");
-            jsString.Append(String.Format("jQuery('#slides_{0}').cycle({{", ModuleId));
-            jsString.Append(String.Format("fx: {0}, ", _transitionEffect));
-            jsString.Append(String.Format("speedIn: {0}, ", _speedIn));
-            jsString.Append(String.Format("speedOut: {0}, ", _speedOut));
-            jsString.Append(String.Format("easeIn: {0}, ", _easeInEffect));
-            jsString.Append(String.Format("easeOut: {0}, ", _easeOutEffect));
-            jsString.Append(String.Format("sync: {0}, ", _syncOff));
-            jsString.Append(String.Format("timeout: {0}, ", _timeout));
-            jsString.Append(String.Format("delay: {0}, ", _delay));
-            jsString.Append(String.Format("pause: {0}, ", _pause));
-            jsString.Append(String.Format("random: {0}, ", _random));
-            jsString.Append(String.Format("autostop: {0}, ", _loop));
-            jsString.Append(String.Format("autostopCount: {0}, ", _numberOfTransitions));
-            jsString.Append(String.Format("cleartypeNoBg: {0}, ", "true"));
-            jsString.Append(String.Format("startingSlide: {0}, ", _slideStart));
-            jsString.Append(String.Format("randomizeEffects: {0}, ", _randomizeTransitions));
-            jsString.Append(String.Format("height: {0}, ", _height));
+            //jsString.Append("jQuery(function() { ");
+            //jsString.Append(String.Format("jQuery('#slides_{0}').cycle({{", ModuleId));
+            //jsString.Append(String.Format("fx: {0}, ", _transitionEffect));
+            //jsString.Append(String.Format("speedIn: {0}, ", _speedIn));
+            //jsString.Append(String.Format("speedOut: {0}, ", _speedOut));
+            //jsString.Append(String.Format("easeIn: {0}, ", _easeInEffect));
+            //jsString.Append(String.Format("easeOut: {0}, ", _easeOutEffect));
+            //jsString.Append(String.Format("sync: {0}, ", _sync));
+            //jsString.Append(String.Format("timeout: {0}, ", _timeout));
+            //jsString.Append(String.Format("delay: {0}, ", _delay));
+            //jsString.Append(String.Format("pause: {0}, ", _pause));
+            //jsString.Append(String.Format("random: {0}, ", _random));
+            //jsString.Append(String.Format("autostop: {0}, ", _loop));
+            //jsString.Append(String.Format("autostopCount: {0}, ", _numberOfTransitions));
+            //jsString.Append(String.Format("cleartypeNoBg: {0}, ", "true"));
+            //jsString.Append(String.Format("startingSlide: {0}, ", _slideStart));
+            //jsString.Append(String.Format("randomizeEffects: {0}, ", _randomizeTransitions));
+            //jsString.Append(String.Format("height: {0}, ", _height));
 
-            if (_hasNextButton)
-                jsString.Append(String.Format("next: '#slides_{0}_next', ", ModuleId));
+            //if (_hasNextButton)
+            //    jsString.Append(String.Format("next: '#slides_{0}_next', ", ModuleId));
 
-            if (_hasPreviousButton)
-                jsString.Append(String.Format("prev: '#slides_{0}_prev', ", ModuleId));
+            //if (_hasPreviousButton)
+            //    jsString.Append(String.Format("prev: '#slides_{0}_prev', ", ModuleId));
 
-            if (_hasPager)
-            {
-                jsString.Append(String.Format("pager: '#slides_{0}_pager', ", ModuleId));
-                jsString.Append(String.Format("pagerAnchorBuilder: slides_{0}_pagerAnchorBuilder, ", ModuleId));
-                jsString.Append(String.Format("updateActivePagerLink: slides_{0}_updateActivePagerLink, ", ModuleId));
-            }
+            //if (_hasPager)
+            //{
+            //    jsString.Append(String.Format("pager: '#slides_{0}_pager', ", ModuleId));
+            //    jsString.Append(String.Format("pagerAnchorBuilder: slides_{0}_pagerAnchorBuilder, ", ModuleId));
+            //    jsString.Append(String.Format("updateActivePagerLink: slides_{0}_updateActivePagerLink, ", ModuleId));
+            //}
 
-            jsString.Append("cleartype: 1");
-            jsString.Append("}); ");
+            //jsString.Append("cleartype: 1");
+            //jsString.Append("}); ");
 
-            if (_hasPager)
-            {
-                jsString.Append(string.Format("jQuery('#slides_{0}_pager li:first').addClass('firstSlide'); ", ModuleId));
-                jsString.Append(string.Format("jQuery('#slides_{0}_pager li:last').addClass('lastSlide'); ", ModuleId));
-            }
+            //if (_hasPager)
+            //{
+            //    jsString.Append(string.Format("jQuery('#slides_{0}_pager li:first').addClass('firstSlide'); ", ModuleId));
+            //    jsString.Append(string.Format("jQuery('#slides_{0}_pager li:last').addClass('lastSlide'); ", ModuleId));
+            //}
 
-            if (_hasPauseButton)
-            {
-                jsString.Append(string.Format("jQuery('#slides_{0}_pause_button').click(function() {{ ", ModuleId));
-                jsString.Append(string.Format("jQuery('#slides_{0}').cycle('pause'); ", ModuleId));
-                jsString.Append("}); ");
-            }
+            //if (_hasPauseButton)
+            //{
+            //    jsString.Append(string.Format("jQuery('#slides_{0}_pause_button').click(function() {{ ", ModuleId));
+            //    jsString.Append(string.Format("jQuery('#slides_{0}').cycle('pause'); ", ModuleId));
+            //    jsString.Append("}); ");
+            //}
 
-            if (_hasPlayButton)
-            {
-                jsString.Append(string.Format("jQuery('#slides_{0}_play_button').click(function() {{ ", ModuleId));
-                jsString.Append(string.Format("jQuery('#slides_{0}').cycle('resume'); ", ModuleId));
-                jsString.Append("}); ");
-            }
+            //if (_hasPlayButton)
+            //{
+            //    jsString.Append(string.Format("jQuery('#slides_{0}_play_button').click(function() {{ ", ModuleId));
+            //    jsString.Append(string.Format("jQuery('#slides_{0}').cycle('resume'); ", ModuleId));
+            //    jsString.Append("}); ");
+            //}
 
-            if (_hasPausePlayButton)
-            {
-                jsString.Append(string.Format("jQuery('#slides_{0}_pauseplay_button').click(function() {{ ", ModuleId));
-                jsString.Append("if(jQuery(this).hasClass('pause')) { ");
-                jsString.Append("jQuery(this).removeClass('pause').addClass('resume').text('Play'); ");
-                jsString.Append(string.Format("jQuery('#slides_{0}').cycle('pause'); ", ModuleId));
-                jsString.Append("} else if(jQuery(this).hasClass('resume')) { ");
-                jsString.Append("jQuery(this).removeClass('resume').addClass('pause').text('Pause'); ");
-                jsString.Append(string.Format("jQuery('#slides_{0}').cycle('resume'); ", ModuleId));
-                jsString.Append("} ");
-                jsString.Append("}); ");
-            }
+            //if (_hasPausePlayButton)
+            //{
+            //    jsString.Append(string.Format("jQuery('#slides_{0}_pauseplay_button').click(function() {{ ", ModuleId));
+            //    jsString.Append("if(jQuery(this).hasClass('pause')) { ");
+            //    jsString.Append("jQuery(this).removeClass('pause').addClass('resume').text('Play'); ");
+            //    jsString.Append(string.Format("jQuery('#slides_{0}').cycle('pause'); ", ModuleId));
+            //    jsString.Append("} else if(jQuery(this).hasClass('resume')) { ");
+            //    jsString.Append("jQuery(this).removeClass('resume').addClass('pause').text('Pause'); ");
+            //    jsString.Append(string.Format("jQuery('#slides_{0}').cycle('resume'); ", ModuleId));
+            //    jsString.Append("} ");
+            //    jsString.Append("}); ");
+            //}
 
-            jsString.Append("}); ");
+            //jsString.Append("}); ");
 
-            litJSOutput.Text = String.Format("<script type=\"text/javascript\">{0}</script>", jsString);
+            //litJSOutput.Text = String.Format("<script type=\"text/javascript\">{0}</script>", jsString);
         }
 
         private string GenerateNext()
@@ -245,6 +252,7 @@ namespace DNNspot.Rotator
         {
             StringBuilder pager = new StringBuilder();
             int slideNumber = 1;
+
             string pagerText = String.Empty;
 
             foreach (Slide slide in _slides)
@@ -305,11 +313,58 @@ namespace DNNspot.Rotator
         {
             var output = new StringBuilder();
 
-            output.Append(String.Format("<div id='slides_{0}' class='slides'>", ModuleId));
+            output.Append(String.Format("<div id='slides_{0}' ", ModuleId));
+            output.Append("class='cycle-slideshow' "); // AUTO-INITIALIZE
+            output.Append("data-cycle-slides='> div.slide' "); // SELECT SLIDES
+            output.Append("data-cycle-log='false' "); // SHUT OFF CONSOLE LOGGING
+            output.Append("data-cycle-slide-active-class='activeSlide' ");
+            output.Append("data-cycle-pager-active-class='activeSlide' ");
+            output.AppendFormat("data-cycle-fx='{0}' ", _transitionEffect);
+            output.AppendFormat("data-cycle-carousel-visible='{0}' ", _visibleCarouselSlides);
+            output.AppendFormat("data-cycle-speed='{0}' ", _speed);
+            output.AppendFormat("data-cycle-delay='{0}' ", _delay);
+            output.AppendFormat("data-cycle-pause-on-hover='{0}' ", _pause);
+            output.AppendFormat("data-cycle-sync='{0}' ", _sync);
+            output.AppendFormat("data-cycle-random='{0}' ", _random);
+            output.AppendFormat("data-cycle-timeout='{0}' ", _timeout);
+            output.AppendFormat("data-cycle-loop='{0}' ", _loop);
+            output.Append("data-cycle-swipe='true' ");
+            output.AppendFormat("data-cycle-auto-height='{0}' ", _height);
+            output.Append("data-cycle-swipe='true' ");
+            output.AppendFormat("data-cycle-starting-slide={0}", _slideStart);
+
+            if (_hasPager)
+            {
+                output.AppendFormat("data-cycle-pager='#slides_{0}_pager' ", ModuleId);
+                output.Append("data-cycle-pager-template='' ");
+            }
+
+            if (_hasPreviousButton)
+            {
+                output.AppendFormat("data-cycle-prev='#slides_{0}_prev' ", ModuleId);
+            }
+
+            if (_hasNextButton)
+            {
+                output.AppendFormat("data-cycle-next='#slides_{0}_next' ", ModuleId);
+            }
+
+            if (!String.IsNullOrEmpty(_easeInEffect))
+            {
+                output.AppendFormat("data-cycle-easing={0} ", _easeInEffect);
+            }
+
+            if (!String.IsNullOrEmpty(_easeOutEffect))
+            {
+                output.AppendFormat("data-cycle-ease-out={0} ", _easeOutEffect);
+            }
+
+
+            output.Append(">");
 
             foreach (Slide slide in _slides)
             {
-                output.Append(String.Format("<div class='slide' title='{0}' style='display:none;'>{1}</div>", slide.Title, TokenizeSlideBody(slide)));
+                output.Append(String.Format("<div class='slide' title='{0}'>{1}</div>", slide.Title, TokenizeSlideBody(slide)));
             }
 
             output.Append("</div>");
@@ -331,11 +386,54 @@ namespace DNNspot.Rotator
 
         private void IncludeJS()
         {
-            const string jsEasingKey = "DNNspot-Rotator-Easing";
-            const string jsCycleKey = "DNNspot-Rotator-Cycle";
+            const string jsCycle = "DNNspot-Rotator-Cycle";
+            const string jsEasing = "DNNspot-Rotator-Easing";
 
-            RegisterJavascriptFileOnceInBody(jsCycleKey, String.Format("{0}{1}js/jquery.cycle.all.min.js", Globals.ApplicationPath, ModuleWebPath));
-            RegisterJavascriptFileOnceInBody(jsEasingKey, String.Format("{0}{1}js/jquery.easing.1.3.js", Globals.ApplicationPath, ModuleWebPath)); 
+            const string jsCaption = "DNNspot-Rotator-Caption";
+            const string jsCenter = "DNNspot-Rotator-Center";
+            const string jsSwipe = "DNNspot-Rotator-Swipe";
+            const string jsVideo = "DNNspot-Rotator-Video";
+
+            const string jsCarousel = "DNNspot-Rotator-Carousel";
+            const string jsFlip = "DNNspot-Rotator-Flip";
+            const string jsIEFade = "DNNspot-Rotator-IEFade";
+            const string jsScrollVert = "DNNspot-Rotator-ScrollVert";
+            const string jsShuffle = "DNNspot-Rotator-Shuffle";
+            const string jsTile = "DNNspot-Rotator-Tile";
+
+            RegisterJavascriptFileOnceInBody(jsCycle, String.Format("{0}{1}js/jquery.cycle2.min.js", Globals.ApplicationPath, ModuleWebPath));
+            RegisterJavascriptFileOnceInBody(jsEasing, String.Format("{0}{1}js/jquery.easing.1.3.js", Globals.ApplicationPath, ModuleWebPath));
+            RegisterJavascriptFileOnceInBody(jsCaption, String.Format("{0}{1}js/jquery.cycle2.caption2.min.js", Globals.ApplicationPath, ModuleWebPath));
+            RegisterJavascriptFileOnceInBody(jsCenter, String.Format("{0}{1}js/jquery.cycle2.center.min.js", Globals.ApplicationPath, ModuleWebPath));
+            RegisterJavascriptFileOnceInBody(jsSwipe, String.Format("{0}{1}js/jquery.cycle2.swipe.min.js", Globals.ApplicationPath, ModuleWebPath));
+            RegisterJavascriptFileOnceInBody(jsVideo, String.Format("{0}{1}js/jquery.cycle2.video.min.js", Globals.ApplicationPath, ModuleWebPath));
+
+            switch (_transitionEffect)
+            {
+                case "carousel":
+                    RegisterJavascriptFileOnceInBody(jsCarousel, String.Format("{0}{1}js/jquery.cycle2.carousel.min.js", Globals.ApplicationPath, ModuleWebPath));
+                    break;
+                
+                case "flipHorz":
+                    RegisterJavascriptFileOnceInBody(jsFlip, String.Format("{0}{1}js/jquery.cycle2.flip.min.js", Globals.ApplicationPath, ModuleWebPath));
+                    break;
+
+                case "scrollVert":
+                    RegisterJavascriptFileOnceInBody(jsScrollVert, String.Format("{0}{1}js/jquery.cycle2.scrollVert.min.js", Globals.ApplicationPath, ModuleWebPath));
+                    break;
+
+                case "shuffle":
+                    RegisterJavascriptFileOnceInBody(jsShuffle, String.Format("{0}{1}js/jquery.cycle2.shuffle.min.js", Globals.ApplicationPath, ModuleWebPath));
+                    break;
+
+                case "tileSlide":
+                    RegisterJavascriptFileOnceInBody(jsTile, String.Format("{0}{1}js/jquery.cycle2.tile.min.js", Globals.ApplicationPath, ModuleWebPath));
+                    break;
+
+                default:
+                    RegisterJavascriptFileOnceInBody(jsIEFade, String.Format("{0}{1}js/jquery.cycle2.ie-fade.min.js", Globals.ApplicationPath, ModuleWebPath));
+                    break;
+            }
         }
 
         private void LoadVariables()
@@ -344,8 +442,12 @@ namespace DNNspot.Rotator
                 _templateId = Convert.ToInt32(Settings[ModuleSettingNames.TemplateId]);
 
             _transitionEffect = Settings[ModuleSettingNames.TransitionEffect] != null
-                                    ? "'" + Settings[ModuleSettingNames.TransitionEffect] + "'"
-                                    : "'fade'";
+                                    ? Convert.ToString(Settings[ModuleSettingNames.TransitionEffect])
+                                    : "fade";
+
+            _visibleCarouselSlides = Settings[ModuleSettingNames.VisibleCarouselSlides] != null
+                                    ? Convert.ToString(Settings[ModuleSettingNames.VisibleCarouselSlides])
+                                    : "2";
 
             _easeInEffect = Settings[ModuleSettingNames.EaseInEffect] != null
                                 ? "'" + Settings[ModuleSettingNames.EaseInEffect] + "'"
@@ -355,13 +457,9 @@ namespace DNNspot.Rotator
                                  ? "'" + Settings[ModuleSettingNames.EaseOutEffect] + "'"
                                  : "'swing'";
 
-            _speedIn = Settings[ModuleSettingNames.SpeedIn] != null
-                           ? Settings[ModuleSettingNames.SpeedIn].ToString()
-                           : "300";
-
-            _speedOut = Settings[ModuleSettingNames.SpeedOut] != null
-                            ? Settings[ModuleSettingNames.SpeedOut].ToString()
-                            : "300";
+            _speed = Settings[ModuleSettingNames.Speed] != null
+                           ? Settings[ModuleSettingNames.Speed].ToString()
+                           : "1000";
 
             _timeout = Settings[ModuleSettingNames.Timeout] != null
                            ? Settings[ModuleSettingNames.Timeout].ToString()
@@ -372,24 +470,20 @@ namespace DNNspot.Rotator
                          : "0";
 
             _pause = Settings[ModuleSettingNames.Pause] != null
-                         ? "1"
-                         : "0";
+                         ? "true"
+                         : "false";
 
             _random = Settings[ModuleSettingNames.Random] != null
-                          ? "1"
-                          : "0";
+                          ? "true"
+                          : "false";
 
-            _syncOff = Settings[ModuleSettingNames.SyncOff] != null
-                           ? "0"
-                           : "1";
-
-            _randomizeTransitions = Settings[ModuleSettingNames.RandomizeTransitions] != null
-                           ? "1"
-                           : "0";
+            _sync = Settings[ModuleSettingNames.Sync] != null
+                           ? "false"
+                           : "true";
 
             _loop = Settings[ModuleSettingNames.Loop] != null
-                           ? "1"
-                           : "0";
+                           ? "true"
+                           : "false";
 
             _numberOfTransitions = Settings[ModuleSettingNames.NumberOfTransitions] != null
                            ? Settings[ModuleSettingNames.NumberOfTransitions].ToString()
@@ -401,13 +495,20 @@ namespace DNNspot.Rotator
 
             _height = Settings[ModuleSettingNames.Height] != null
                ? "'" + Settings[ModuleSettingNames.Height].ToString() + "'"
-               : "'auto'";
+               : "'calc'";
         }
 
         private string Tokenize(string template)
         {
             var output = new StringBuilder();
             MatchCollection templateArray = Regex.Matches(template, @"\[.*?\]|[^\[.*?\]]+|[\.|\?]+");
+
+            _hasPager = template.Contains(Tokens.Pager) ? true : false;
+            _hasPlayButton = template.Contains(Tokens.Play) ? true : false;
+            _hasPausePlayButton = template.Contains(Tokens.PausePlay) ? true : false;
+            _hasPauseButton = template.Contains(Tokens.Pause) ? true : false;
+            _hasNextButton = template.Contains(Tokens.Next) ? true : false;
+            _hasPreviousButton = template.Contains(Tokens.Previous) ? true : false;
 
             for (int i = 0; i < templateArray.Count; i++)
             {
@@ -420,15 +521,12 @@ namespace DNNspot.Rotator
                         break;
                     case Tokens.Pager:
                         output.Append(GeneratePager());
-                        _hasPager = true;
                         break;
                     case Tokens.Next:
                         output.Append(GenerateNext());
-                        _hasNextButton = true;
                         break;
                     case Tokens.Previous:
                         output.Append(GeneratePrev());
-                        _hasPreviousButton = true;
                         break;
                     case Tokens.Pause:
                         output.Append(GeneratePause());
