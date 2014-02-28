@@ -494,8 +494,8 @@ namespace DNNspot.Rotator
                : "0";
 
             _height = Settings[ModuleSettingNames.Height] != null
-               ? "'" + Settings[ModuleSettingNames.Height].ToString() + "'"
-               : "'calc'";
+               ? Settings[ModuleSettingNames.Height].ToString()
+               : "calc";
         }
 
         private string Tokenize(string template)
