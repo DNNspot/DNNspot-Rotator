@@ -8,7 +8,7 @@
 ===============================================================================
 EntitySpaces Version : 2012.1.0930.0
 EntitySpaces Driver  : SQL
-Date Generated       : 4/12/2013 1:14:08 PM
+Date Generated       : 3/14/2014 9:53:10 AM
 ===============================================================================
 */
 
@@ -336,6 +336,26 @@ namespace DNNspot.Rotator.DataModel
 			}
 		}		
 		
+		/// <summary>
+		/// Maps to DNNspot_Rotator_Templates.SlideTemplate
+		/// </summary>
+		[DataMember(EmitDefaultValue=false)]
+		virtual public System.String SlideTemplate
+		{
+			get
+			{
+				return base.GetSystemString(TemplateMetadata.ColumnNames.SlideTemplate);
+			}
+			
+			set
+			{
+				if(base.SetSystemString(TemplateMetadata.ColumnNames.SlideTemplate, value))
+				{
+					OnPropertyChanged(TemplateMetadata.PropertyNames.SlideTemplate);
+				}
+			}
+		}		
+		
 		#endregion	
 
 		#region .str() Properties
@@ -364,7 +384,8 @@ namespace DNNspot.Rotator.DataModel
 						case "Title": this.str().Title = (string)value; break;							
 						case "Body": this.str().Body = (string)value; break;							
 						case "CreatedDate": this.str().CreatedDate = (string)value; break;							
-						case "ModifiedDate": this.str().ModifiedDate = (string)value; break;
+						case "ModifiedDate": this.str().ModifiedDate = (string)value; break;							
+						case "SlideTemplate": this.str().SlideTemplate = (string)value; break;
 					}
 				}
 				else
@@ -543,6 +564,21 @@ namespace DNNspot.Rotator.DataModel
 					else entity.ModifiedDate = Convert.ToDateTime(value);
 				}
 			}
+				
+			public System.String SlideTemplate
+			{
+				get
+				{
+					System.String data = entity.SlideTemplate;
+					return (data == null) ? String.Empty : Convert.ToString(data);
+				}
+
+				set
+				{
+					if (value == null || value.Length == 0) entity.SlideTemplate = null;
+					else entity.SlideTemplate = Convert.ToString(value);
+				}
+			}
 			
 
 			private esTemplate entity;
@@ -707,6 +743,7 @@ namespace DNNspot.Rotator.DataModel
 				case "Body": return this.Body;
 				case "CreatedDate": return this.CreatedDate;
 				case "ModifiedDate": return this.ModifiedDate;
+				case "SlideTemplate": return this.SlideTemplate;
 
                 default: return null;
             }
@@ -749,6 +786,11 @@ namespace DNNspot.Rotator.DataModel
 		public esQueryItem ModifiedDate
 		{
 			get { return new esQueryItem(this, TemplateMetadata.ColumnNames.ModifiedDate, esSystemType.DateTime); }
+		} 
+		
+		public esQueryItem SlideTemplate
+		{
+			get { return new esQueryItem(this, TemplateMetadata.ColumnNames.SlideTemplate, esSystemType.String); }
 		} 
 		
 		#endregion
@@ -809,13 +851,17 @@ namespace DNNspot.Rotator.DataModel
 				
 			c = new esColumnMetadata(TemplateMetadata.ColumnNames.CreatedDate, 5, typeof(System.DateTime), esSystemType.DateTime);
 			c.PropertyName = TemplateMetadata.PropertyNames.CreatedDate;
-			c.HasDefault = true;
-			c.Default = @"(getdate())";
 			c.IsNullable = true;
 			m_columns.Add(c);
 				
 			c = new esColumnMetadata(TemplateMetadata.ColumnNames.ModifiedDate, 6, typeof(System.DateTime), esSystemType.DateTime);
 			c.PropertyName = TemplateMetadata.PropertyNames.ModifiedDate;
+			c.IsNullable = true;
+			m_columns.Add(c);
+				
+			c = new esColumnMetadata(TemplateMetadata.ColumnNames.SlideTemplate, 7, typeof(System.String), esSystemType.String);
+			c.PropertyName = TemplateMetadata.PropertyNames.SlideTemplate;
+			c.CharacterMaxLength = 1073741823;
 			c.IsNullable = true;
 			m_columns.Add(c);
 				
@@ -852,6 +898,7 @@ namespace DNNspot.Rotator.DataModel
 			 public const string Body = "Body";
 			 public const string CreatedDate = "CreatedDate";
 			 public const string ModifiedDate = "ModifiedDate";
+			 public const string SlideTemplate = "SlideTemplate";
 		}
 		#endregion	
 		
@@ -865,6 +912,7 @@ namespace DNNspot.Rotator.DataModel
 			 public const string Body = "Body";
 			 public const string CreatedDate = "CreatedDate";
 			 public const string ModifiedDate = "ModifiedDate";
+			 public const string SlideTemplate = "SlideTemplate";
 		}
 		#endregion	
 
@@ -915,7 +963,8 @@ namespace DNNspot.Rotator.DataModel
 				meta.AddTypeMap("Title", new esTypeMap("nvarchar", "System.String"));
 				meta.AddTypeMap("Body", new esTypeMap("nvarchar", "System.String"));
 				meta.AddTypeMap("CreatedDate", new esTypeMap("datetime", "System.DateTime"));
-				meta.AddTypeMap("ModifiedDate", new esTypeMap("datetime", "System.DateTime"));			
+				meta.AddTypeMap("ModifiedDate", new esTypeMap("datetime", "System.DateTime"));
+				meta.AddTypeMap("SlideTemplate", new esTypeMap("nvarchar", "System.String"));			
 				
 				
 				

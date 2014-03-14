@@ -54,6 +54,9 @@ namespace DNNspot.Rotator
         private bool _hasPausePlayButton;
         private bool _hasPlayButton;
         private bool _hasPreviousButton;
+        private bool _hasCustomField1;
+        private bool _hasCustomField2;
+        private bool _hasCustomField3;
         private string _pause;
         private string _random;
         private string _speed;
@@ -245,7 +248,7 @@ namespace DNNspot.Rotator
             var template = new Template();
             template.LoadByPrimaryKey(Convert.ToInt32(_templateId));
 
-            litOutput.Text = Tokenize(template.Body ?? Tokens.Slides);
+            litOutput.Text = Tokenize(template);
         }
 
         private string GeneratePager()
@@ -309,7 +312,7 @@ namespace DNNspot.Rotator
             return String.Format("<a href='javascript:void(0);' id='slides_{0}_prev'>Previous</a>", ModuleId);
         }
 
-        private string GenerateSlides()
+        private string GenerateSlides(Template template)
         {
             var output = new StringBuilder();
 
@@ -331,7 +334,7 @@ namespace DNNspot.Rotator
             output.Append("data-cycle-swipe='true' ");
             output.AppendFormat("data-cycle-auto-height='{0}' ", _height);
             output.Append("data-cycle-swipe='true' ");
-            output.AppendFormat("data-cycle-starting-slide={0}", _slideStart);
+            output.AppendFormat("data-cycle-starting-slide='{0}'", _slideStart);
 
             if (_hasPager)
             {
@@ -364,7 +367,7 @@ namespace DNNspot.Rotator
 
             foreach (Slide slide in _slides)
             {
-                output.Append(String.Format("<div class='slide' title='{0}'>{1}</div>", slide.Title, TokenizeSlideBody(slide)));
+                output.Append(String.Format("<div class='slide' title='{0}'>{1}</div>", slide.Title, TokenizeSlideBody(template, slide)));
             }
 
             output.Append("</div>");
@@ -498,17 +501,18 @@ namespace DNNspot.Rotator
                : "calc";
         }
 
-        private string Tokenize(string template)
+        private string Tokenize(Template template)
         {
             var output = new StringBuilder();
-            MatchCollection templateArray = Regex.Matches(template, @"\[.*?\]|[^\[.*?\]]+|[\.|\?]+");
+            string templateString = template.Body ?? Tokens.Slides;
+            MatchCollection templateArray = Regex.Matches(templateString, @"\[.*?\]|[^\[.*?\]]+|[\.|\?]+");
 
-            _hasPager = template.Contains(Tokens.Pager) ? true : false;
-            _hasPlayButton = template.Contains(Tokens.Play) ? true : false;
-            _hasPausePlayButton = template.Contains(Tokens.PausePlay) ? true : false;
-            _hasPauseButton = template.Contains(Tokens.Pause) ? true : false;
-            _hasNextButton = template.Contains(Tokens.Next) ? true : false;
-            _hasPreviousButton = template.Contains(Tokens.Previous) ? true : false;
+            _hasPager = templateString.Contains(Tokens.Pager) ? true : false;
+            _hasPlayButton = templateString.Contains(Tokens.Play) ? true : false;
+            _hasPausePlayButton = templateString.Contains(Tokens.PausePlay) ? true : false;
+            _hasPauseButton = templateString.Contains(Tokens.Pause) ? true : false;
+            _hasNextButton = templateString.Contains(Tokens.Next) ? true : false;
+            _hasPreviousButton = templateString.Contains(Tokens.Previous) ? true : false;
 
             for (int i = 0; i < templateArray.Count; i++)
             {
@@ -517,7 +521,7 @@ namespace DNNspot.Rotator
                 switch (templateArray[i].Value)
                 {
                     case Tokens.Slides:
-                        output.Append(GenerateSlides());
+                        output.Append(GenerateSlides(template));
                         break;
                     case Tokens.Pager:
                         output.Append(GeneratePager());
@@ -537,6 +541,15 @@ namespace DNNspot.Rotator
                     case Tokens.PausePlay:
                         output.Append(GeneratePausePlay());
                         break;
+                    //case Tokens.CustomField1:
+                    //    output.Append(_.CustomField1);
+                    //    break;
+                    //case Tokens.CustomField2:
+                    //    output.Append(slide.CustomField2);
+                    //    break;
+                    //case Tokens.CustomField3:
+                    //    output.Append(slide.CustomField3);
+                    //    break;
                     default:
                         output.Append(templateArray[i]);
                         break;
@@ -546,10 +559,11 @@ namespace DNNspot.Rotator
             return output.ToString();
         }
 
-        private static string TokenizeSlideBody(Slide slide)
+        private static string TokenizeSlideBody(Template template, Slide slide)
         {
             var output = new StringBuilder();
-            MatchCollection templateArray = Regex.Matches(slide.Body, @"\[.*?\]|[^\[.*?\]]+|[\.|\?]+");
+            string slideTemplate = String.IsNullOrEmpty(template.SlideTemplate) ? "[BODY]" : template.SlideTemplate;
+            MatchCollection templateArray = Regex.Matches(slideTemplate, @"\[.*?\]|[^\[.*?\]]+|[\.|\?]+");
 
             for (int i = 0; i < templateArray.Count; i++)
             {
@@ -559,6 +573,18 @@ namespace DNNspot.Rotator
                 {
                     case SlideTokens.Title:
                         output.Append(slide.Title);
+                        break;
+                    case SlideTokens.Body:
+                        output.Append(slide.Body);
+                        break;
+                    case SlideTokens.CustomField1:
+                        output.Append(slide.CustomField1);
+                        break;
+                    case SlideTokens.CustomField2:
+                        output.Append(slide.CustomField2);
+                        break;
+                    case SlideTokens.CustomField3:
+                        output.Append(slide.CustomField3);
                         break;
                     default:
                         output.Append(templateArray[i]);
@@ -575,6 +601,10 @@ namespace DNNspot.Rotator
     public static class SlideTokens
     {
         public const string Title = "[TITLE]";
+        public const string Body = "[BODY]";
+        public const string CustomField1 = "[CUSTOMFIELD1]";
+        public const string CustomField2 = "[CUSTOMFIELD2]";
+        public const string CustomField3 = "[CUSTOMFIELD3]";
     }
 
     public static class Tokens

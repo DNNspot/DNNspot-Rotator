@@ -15,6 +15,18 @@
     <dnn:TextEditor id="txtThumbnail" runat="server" height="350" width="600" HtmlEncode="false">
     </dnn:TextEditor><br />
     <br />
+    Custom Field 1<br />
+    <dnn:TextEditor id="txtCustomField1" runat="server" height="350" width="600" HtmlEncode="false">
+    </dnn:TextEditor><br />
+    <br />
+    Custom Field 2<br />
+    <dnn:TextEditor id="txtCustomField2" runat="server" height="350" width="600" HtmlEncode="false">
+    </dnn:TextEditor><br />
+    <br />
+    Custom Field 3<br />
+    <dnn:TextEditor id="txtCustomField3" runat="server" height="350" width="600" HtmlEncode="false">
+    </dnn:TextEditor><br />
+    <br />
     Visible<br />
     <asp:CheckBox ID="chkVisible" runat="server" Checked="true" /><br />
     <br />

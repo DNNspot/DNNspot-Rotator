@@ -1,0 +1,15 @@
+C:\Code\DNNspot-Rotator\Rotator\bin\DNNspot.Rotator.dll
+C:\Code\DNNspot-Rotator\Rotator\bin\DNNspot.Rotator.pdb
+C:\Code\DNNspot-Rotator\Rotator\bin\DNNspot.Rotator.Common.dll
+C:\Code\DNNspot-Rotator\Rotator\bin\DNNspot.Rotator.DataModel.dll
+C:\Code\DNNspot-Rotator\Rotator\bin\EntitySpaces.Core.dll
+C:\Code\DNNspot-Rotator\Rotator\bin\EntitySpaces.DebuggerVisualizer.dll
+C:\Code\DNNspot-Rotator\Rotator\bin\EntitySpaces.DynamicQuery.dll
+C:\Code\DNNspot-Rotator\Rotator\bin\EntitySpaces.Interfaces.dll
+C:\Code\DNNspot-Rotator\Rotator\bin\EntitySpaces.LoaderMT.dll
+C:\Code\DNNspot-Rotator\Rotator\bin\EntitySpaces.SqlClientProvider.dll
+C:\Code\DNNspot-Rotator\Rotator\bin\DNNspot.Rotator.Common.pdb
+C:\Code\DNNspot-Rotator\Rotator\bin\DNNspot.Rotator.DataModel.pdb
+C:\Code\DNNspot-Rotator\Rotator\obj\Debug\Rotator.csprojResolveAssemblyReference.cache
+C:\Code\DNNspot-Rotator\Rotator\obj\Debug\DNNspot.Rotator.dll
+C:\Code\DNNspot-Rotator\Rotator\obj\Debug\DNNspot.Rotator.pdb

@@ -8,7 +8,7 @@
 ===============================================================================
 EntitySpaces Version : 2012.1.0930.0
 EntitySpaces Driver  : SQL
-Date Generated       : 4/12/2013 1:14:06 PM
+Date Generated       : 3/14/2014 9:53:10 AM
 ===============================================================================
 */
 
@@ -396,6 +396,66 @@ namespace DNNspot.Rotator.DataModel
 			}
 		}		
 		
+		/// <summary>
+		/// Maps to DNNspot_Rotator_Slides.CustomField1
+		/// </summary>
+		[DataMember(EmitDefaultValue=false)]
+		virtual public System.String CustomField1
+		{
+			get
+			{
+				return base.GetSystemString(SlideMetadata.ColumnNames.CustomField1);
+			}
+			
+			set
+			{
+				if(base.SetSystemString(SlideMetadata.ColumnNames.CustomField1, value))
+				{
+					OnPropertyChanged(SlideMetadata.PropertyNames.CustomField1);
+				}
+			}
+		}		
+		
+		/// <summary>
+		/// Maps to DNNspot_Rotator_Slides.CustomField2
+		/// </summary>
+		[DataMember(EmitDefaultValue=false)]
+		virtual public System.String CustomField2
+		{
+			get
+			{
+				return base.GetSystemString(SlideMetadata.ColumnNames.CustomField2);
+			}
+			
+			set
+			{
+				if(base.SetSystemString(SlideMetadata.ColumnNames.CustomField2, value))
+				{
+					OnPropertyChanged(SlideMetadata.PropertyNames.CustomField2);
+				}
+			}
+		}		
+		
+		/// <summary>
+		/// Maps to DNNspot_Rotator_Slides.CustomField3
+		/// </summary>
+		[DataMember(EmitDefaultValue=false)]
+		virtual public System.String CustomField3
+		{
+			get
+			{
+				return base.GetSystemString(SlideMetadata.ColumnNames.CustomField3);
+			}
+			
+			set
+			{
+				if(base.SetSystemString(SlideMetadata.ColumnNames.CustomField3, value))
+				{
+					OnPropertyChanged(SlideMetadata.PropertyNames.CustomField3);
+				}
+			}
+		}		
+		
 		#endregion	
 
 		#region .str() Properties
@@ -427,7 +487,10 @@ namespace DNNspot.Rotator.DataModel
 						case "DisplayOrder": this.str().DisplayOrder = (string)value; break;							
 						case "CreatedDate": this.str().CreatedDate = (string)value; break;							
 						case "ModifiedDate": this.str().ModifiedDate = (string)value; break;							
-						case "Thumbnail": this.str().Thumbnail = (string)value; break;
+						case "Thumbnail": this.str().Thumbnail = (string)value; break;							
+						case "CustomField1": this.str().CustomField1 = (string)value; break;							
+						case "CustomField2": this.str().CustomField2 = (string)value; break;							
+						case "CustomField3": this.str().CustomField3 = (string)value; break;
 					}
 				}
 				else
@@ -665,6 +728,51 @@ namespace DNNspot.Rotator.DataModel
 					else entity.Thumbnail = Convert.ToString(value);
 				}
 			}
+				
+			public System.String CustomField1
+			{
+				get
+				{
+					System.String data = entity.CustomField1;
+					return (data == null) ? String.Empty : Convert.ToString(data);
+				}
+
+				set
+				{
+					if (value == null || value.Length == 0) entity.CustomField1 = null;
+					else entity.CustomField1 = Convert.ToString(value);
+				}
+			}
+				
+			public System.String CustomField2
+			{
+				get
+				{
+					System.String data = entity.CustomField2;
+					return (data == null) ? String.Empty : Convert.ToString(data);
+				}
+
+				set
+				{
+					if (value == null || value.Length == 0) entity.CustomField2 = null;
+					else entity.CustomField2 = Convert.ToString(value);
+				}
+			}
+				
+			public System.String CustomField3
+			{
+				get
+				{
+					System.String data = entity.CustomField3;
+					return (data == null) ? String.Empty : Convert.ToString(data);
+				}
+
+				set
+				{
+					if (value == null || value.Length == 0) entity.CustomField3 = null;
+					else entity.CustomField3 = Convert.ToString(value);
+				}
+			}
 			
 
 			private esSlide entity;
@@ -832,6 +940,9 @@ namespace DNNspot.Rotator.DataModel
 				case "CreatedDate": return this.CreatedDate;
 				case "ModifiedDate": return this.ModifiedDate;
 				case "Thumbnail": return this.Thumbnail;
+				case "CustomField1": return this.CustomField1;
+				case "CustomField2": return this.CustomField2;
+				case "CustomField3": return this.CustomField3;
 
                 default: return null;
             }
@@ -889,6 +1000,21 @@ namespace DNNspot.Rotator.DataModel
 		public esQueryItem Thumbnail
 		{
 			get { return new esQueryItem(this, SlideMetadata.ColumnNames.Thumbnail, esSystemType.String); }
+		} 
+		
+		public esQueryItem CustomField1
+		{
+			get { return new esQueryItem(this, SlideMetadata.ColumnNames.CustomField1, esSystemType.String); }
+		} 
+		
+		public esQueryItem CustomField2
+		{
+			get { return new esQueryItem(this, SlideMetadata.ColumnNames.CustomField2, esSystemType.String); }
+		} 
+		
+		public esQueryItem CustomField3
+		{
+			get { return new esQueryItem(this, SlideMetadata.ColumnNames.CustomField3, esSystemType.String); }
 		} 
 		
 		#endregion
@@ -960,8 +1086,6 @@ namespace DNNspot.Rotator.DataModel
 				
 			c = new esColumnMetadata(SlideMetadata.ColumnNames.CreatedDate, 7, typeof(System.DateTime), esSystemType.DateTime);
 			c.PropertyName = SlideMetadata.PropertyNames.CreatedDate;
-			c.HasDefault = true;
-			c.Default = @"(getdate())";
 			c.IsNullable = true;
 			m_columns.Add(c);
 				
@@ -972,6 +1096,24 @@ namespace DNNspot.Rotator.DataModel
 				
 			c = new esColumnMetadata(SlideMetadata.ColumnNames.Thumbnail, 9, typeof(System.String), esSystemType.String);
 			c.PropertyName = SlideMetadata.PropertyNames.Thumbnail;
+			c.CharacterMaxLength = 1073741823;
+			c.IsNullable = true;
+			m_columns.Add(c);
+				
+			c = new esColumnMetadata(SlideMetadata.ColumnNames.CustomField1, 10, typeof(System.String), esSystemType.String);
+			c.PropertyName = SlideMetadata.PropertyNames.CustomField1;
+			c.CharacterMaxLength = 1073741823;
+			c.IsNullable = true;
+			m_columns.Add(c);
+				
+			c = new esColumnMetadata(SlideMetadata.ColumnNames.CustomField2, 11, typeof(System.String), esSystemType.String);
+			c.PropertyName = SlideMetadata.PropertyNames.CustomField2;
+			c.CharacterMaxLength = 1073741823;
+			c.IsNullable = true;
+			m_columns.Add(c);
+				
+			c = new esColumnMetadata(SlideMetadata.ColumnNames.CustomField3, 12, typeof(System.String), esSystemType.String);
+			c.PropertyName = SlideMetadata.PropertyNames.CustomField3;
 			c.CharacterMaxLength = 1073741823;
 			c.IsNullable = true;
 			m_columns.Add(c);
@@ -1012,6 +1154,9 @@ namespace DNNspot.Rotator.DataModel
 			 public const string CreatedDate = "CreatedDate";
 			 public const string ModifiedDate = "ModifiedDate";
 			 public const string Thumbnail = "Thumbnail";
+			 public const string CustomField1 = "CustomField1";
+			 public const string CustomField2 = "CustomField2";
+			 public const string CustomField3 = "CustomField3";
 		}
 		#endregion	
 		
@@ -1028,6 +1173,9 @@ namespace DNNspot.Rotator.DataModel
 			 public const string CreatedDate = "CreatedDate";
 			 public const string ModifiedDate = "ModifiedDate";
 			 public const string Thumbnail = "Thumbnail";
+			 public const string CustomField1 = "CustomField1";
+			 public const string CustomField2 = "CustomField2";
+			 public const string CustomField3 = "CustomField3";
 		}
 		#endregion	
 
@@ -1081,7 +1229,10 @@ namespace DNNspot.Rotator.DataModel
 				meta.AddTypeMap("DisplayOrder", new esTypeMap("int", "System.Int32"));
 				meta.AddTypeMap("CreatedDate", new esTypeMap("datetime", "System.DateTime"));
 				meta.AddTypeMap("ModifiedDate", new esTypeMap("datetime", "System.DateTime"));
-				meta.AddTypeMap("Thumbnail", new esTypeMap("nvarchar", "System.String"));			
+				meta.AddTypeMap("Thumbnail", new esTypeMap("nvarchar", "System.String"));
+				meta.AddTypeMap("CustomField1", new esTypeMap("nvarchar", "System.String"));
+				meta.AddTypeMap("CustomField2", new esTypeMap("nvarchar", "System.String"));
+				meta.AddTypeMap("CustomField3", new esTypeMap("nvarchar", "System.String"));			
 				
 				
 				

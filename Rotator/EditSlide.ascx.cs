@@ -37,6 +37,9 @@ namespace DNNspot.Rotator
 
         protected DotNetNuke.UI.UserControls.TextEditor txtBody;
         protected DotNetNuke.UI.UserControls.TextEditor txtThumbnail;
+        protected DotNetNuke.UI.UserControls.TextEditor txtCustomField1;
+        protected DotNetNuke.UI.UserControls.TextEditor txtCustomField2;
+        protected DotNetNuke.UI.UserControls.TextEditor txtCustomField3;
 
         #endregion
 
@@ -118,6 +121,9 @@ namespace DNNspot.Rotator
                 txtTitle.Text = slide.Title;
                 txtBody.Text = slide.Body;
                 txtThumbnail.Text = slide.Thumbnail;
+                txtCustomField1.Text = slide.CustomField1;
+                txtCustomField2.Text = slide.CustomField2;
+                txtCustomField3.Text = slide.CustomField3;
                 
                 chkVisible.Checked = Convert.ToBoolean(slide.IsVisible);
             }
@@ -144,9 +150,10 @@ namespace DNNspot.Rotator
             slide.Title = txtTitle.Text;
             slide.Body = txtBody.Text;
 
-            const string defaultDnnEditorCrap = "<p>&#160;</p>";
-
-            slide.Thumbnail = txtThumbnail.Text == defaultDnnEditorCrap ? txtThumbnail.Text.Replace(defaultDnnEditorCrap, "") : txtThumbnail.Text;
+            slide.Thumbnail = txtThumbnail.Text == DefaultDnnEditorCrap ? txtThumbnail.Text.Replace(DefaultDnnEditorCrap, "") : txtThumbnail.Text;
+            slide.CustomField1 = txtCustomField1.Text == DefaultDnnEditorCrap ? txtCustomField1.Text.Replace(DefaultDnnEditorCrap, "") : txtCustomField1.Text;
+            slide.CustomField2 = txtCustomField2.Text == DefaultDnnEditorCrap ? txtCustomField2.Text.Replace(DefaultDnnEditorCrap, "") : txtCustomField2.Text;
+            slide.CustomField3 = txtCustomField3.Text == DefaultDnnEditorCrap ? txtCustomField3.Text.Replace(DefaultDnnEditorCrap, "") : txtCustomField3.Text;
             slide.IsVisible = chkVisible.Checked;
             slide.ModifiedDate = DateTime.Now;
             slide.Save();

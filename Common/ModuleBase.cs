@@ -91,6 +91,8 @@ namespace DNNspot.Rotator.Common
             return ModuleConfiguration.AuthorizedEditRoles.Split(',').Any(role => UserInfo.IsInRole(role));
         }
 
+        public const string DefaultDnnEditorCrap = "<p>&#160;</p>";
+
         protected void RegisterJavascript(string fullPath)
         {
             var script = new HtmlGenericControl("script");

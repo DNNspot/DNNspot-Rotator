@@ -37,6 +37,7 @@ namespace DNNspot.Rotator
         private int? _templateId;
 
         protected DotNetNuke.UI.UserControls.TextEditor txtBody;
+        protected DotNetNuke.UI.UserControls.TextEditor txtSlideTemplate;
 
         #endregion
 
@@ -107,6 +108,7 @@ namespace DNNspot.Rotator
                 template.LoadByPrimaryKey(Convert.ToInt32(_templateId));
 
                 txtTitle.Text = template.Title;
+                txtSlideTemplate.Text = template.SlideTemplate;
                 txtBody.Text = template.Body;
             }
         }
@@ -124,6 +126,7 @@ namespace DNNspot.Rotator
             template.ModuleID = ModuleId;
             template.Title = txtTitle.Text;
             template.Body = txtBody.Text;
+            template.SlideTemplate = txtSlideTemplate.Text == DefaultDnnEditorCrap ? txtSlideTemplate.Text.Replace(DefaultDnnEditorCrap, "") : txtSlideTemplate.Text;
             template.ModifiedDate = DateTime.Now;
             template.Save();
         }
