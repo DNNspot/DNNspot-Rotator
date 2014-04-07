@@ -8,7 +8,7 @@
 ===============================================================================
 EntitySpaces Version : 2012.1.0930.0
 EntitySpaces Driver  : SQL
-Date Generated       : 3/14/2014 9:53:10 AM
+Date Generated       : 4/4/2014 4:04:41 PM
 ===============================================================================
 */
 
@@ -456,6 +456,26 @@ namespace DNNspot.Rotator.DataModel
 			}
 		}		
 		
+		/// <summary>
+		/// Maps to DNNspot_Rotator_Slides.ViewPermissions
+		/// </summary>
+		[DataMember(EmitDefaultValue=false)]
+		virtual public System.String ViewPermissions
+		{
+			get
+			{
+				return base.GetSystemString(SlideMetadata.ColumnNames.ViewPermissions);
+			}
+			
+			set
+			{
+				if(base.SetSystemString(SlideMetadata.ColumnNames.ViewPermissions, value))
+				{
+					OnPropertyChanged(SlideMetadata.PropertyNames.ViewPermissions);
+				}
+			}
+		}		
+		
 		#endregion	
 
 		#region .str() Properties
@@ -490,7 +510,8 @@ namespace DNNspot.Rotator.DataModel
 						case "Thumbnail": this.str().Thumbnail = (string)value; break;							
 						case "CustomField1": this.str().CustomField1 = (string)value; break;							
 						case "CustomField2": this.str().CustomField2 = (string)value; break;							
-						case "CustomField3": this.str().CustomField3 = (string)value; break;
+						case "CustomField3": this.str().CustomField3 = (string)value; break;							
+						case "ViewPermissions": this.str().ViewPermissions = (string)value; break;
 					}
 				}
 				else
@@ -773,6 +794,21 @@ namespace DNNspot.Rotator.DataModel
 					else entity.CustomField3 = Convert.ToString(value);
 				}
 			}
+				
+			public System.String ViewPermissions
+			{
+				get
+				{
+					System.String data = entity.ViewPermissions;
+					return (data == null) ? String.Empty : Convert.ToString(data);
+				}
+
+				set
+				{
+					if (value == null || value.Length == 0) entity.ViewPermissions = null;
+					else entity.ViewPermissions = Convert.ToString(value);
+				}
+			}
 			
 
 			private esSlide entity;
@@ -943,6 +979,7 @@ namespace DNNspot.Rotator.DataModel
 				case "CustomField1": return this.CustomField1;
 				case "CustomField2": return this.CustomField2;
 				case "CustomField3": return this.CustomField3;
+				case "ViewPermissions": return this.ViewPermissions;
 
                 default: return null;
             }
@@ -1015,6 +1052,11 @@ namespace DNNspot.Rotator.DataModel
 		public esQueryItem CustomField3
 		{
 			get { return new esQueryItem(this, SlideMetadata.ColumnNames.CustomField3, esSystemType.String); }
+		} 
+		
+		public esQueryItem ViewPermissions
+		{
+			get { return new esQueryItem(this, SlideMetadata.ColumnNames.ViewPermissions, esSystemType.String); }
 		} 
 		
 		#endregion
@@ -1118,6 +1160,14 @@ namespace DNNspot.Rotator.DataModel
 			c.IsNullable = true;
 			m_columns.Add(c);
 				
+			c = new esColumnMetadata(SlideMetadata.ColumnNames.ViewPermissions, 13, typeof(System.String), esSystemType.String);
+			c.PropertyName = SlideMetadata.PropertyNames.ViewPermissions;
+			c.CharacterMaxLength = 150;
+			c.HasDefault = true;
+			c.Default = @"('-1')";
+			c.IsNullable = true;
+			m_columns.Add(c);
+				
 		}
 		#endregion	
 	
@@ -1157,6 +1207,7 @@ namespace DNNspot.Rotator.DataModel
 			 public const string CustomField1 = "CustomField1";
 			 public const string CustomField2 = "CustomField2";
 			 public const string CustomField3 = "CustomField3";
+			 public const string ViewPermissions = "ViewPermissions";
 		}
 		#endregion	
 		
@@ -1176,6 +1227,7 @@ namespace DNNspot.Rotator.DataModel
 			 public const string CustomField1 = "CustomField1";
 			 public const string CustomField2 = "CustomField2";
 			 public const string CustomField3 = "CustomField3";
+			 public const string ViewPermissions = "ViewPermissions";
 		}
 		#endregion	
 
@@ -1232,7 +1284,8 @@ namespace DNNspot.Rotator.DataModel
 				meta.AddTypeMap("Thumbnail", new esTypeMap("nvarchar", "System.String"));
 				meta.AddTypeMap("CustomField1", new esTypeMap("nvarchar", "System.String"));
 				meta.AddTypeMap("CustomField2", new esTypeMap("nvarchar", "System.String"));
-				meta.AddTypeMap("CustomField3", new esTypeMap("nvarchar", "System.String"));			
+				meta.AddTypeMap("CustomField3", new esTypeMap("nvarchar", "System.String"));
+				meta.AddTypeMap("ViewPermissions", new esTypeMap("varchar", "System.String"));			
 				
 				
 				

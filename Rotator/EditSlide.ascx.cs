@@ -24,8 +24,12 @@
 */
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using DNNspot.Rotator.Common;
 using DNNspot.Rotator.DataModel;
+using DotNetNuke.Security.Roles;
 
 namespace DNNspot.Rotator
 {
@@ -109,6 +113,13 @@ namespace DNNspot.Rotator
 
         private void PopulateControls()
         {
+
+            //--- DNN roles -- VIEW PERMISSIONS
+            StringBuilder viewPermissionsRolesUi = new StringBuilder();
+            List<int> viewPermission = new List<int>();
+            bool isSelected = false;
+
+
             if (_slideId == null)
             {
                 btnDelete.Visible = false;
@@ -124,9 +135,65 @@ namespace DNNspot.Rotator
                 txtCustomField1.Text = slide.CustomField1;
                 txtCustomField2.Text = slide.CustomField2;
                 txtCustomField3.Text = slide.CustomField3;
-                
                 chkVisible.Checked = Convert.ToBoolean(slide.IsVisible);
+                
+                if (!String.IsNullOrEmpty(slide.ViewPermissions))
+                {
+                    viewPermission = slide.ViewPermissions.ToListOfInt(',');
+                }
+
+                isSelected = viewPermission.Any(a => a == -1);
+
+                viewPermissionsRolesUi.AppendFormat(@"
+                    <tr>
+                        <td>
+                            <input type=""checkbox"" id=""viewPermissionId-{0}"" name=""viewPermissionRole"" value=""{0}"" {1} />
+                            <label for=""viewPermissionId-{0}"">{2}</label>                                                    
+                        </td>
+                    </tr>
+                ",
+                 -1,
+                 isSelected ? @"checked=""checked""" : "",
+                 "All Users"
+                );
             }
+
+
+            RoleController roleController = new RoleController();
+            List<RoleInfo> roleInfos = roleController.GetPortalRoles(PortalId).ToList<RoleInfo>();
+
+            foreach (RoleInfo role in roleInfos)
+            {
+                if (role.RoleType != RoleType.Administrator)
+                {
+                    isSelected = viewPermission.Any(a => a == role.RoleID);
+
+                    viewPermissionsRolesUi.AppendFormat(
+                        @"
+                    <tr>
+                        <td>
+                            <input type=""checkbox"" id=""viewPermissionId-{0}"" name=""viewPermissionRole"" value=""{0}"" {1} />
+                            <label for=""viewPermissionId-{0}"">{2}</label>                                                    
+                        </td>
+                    </tr>
+                ",
+                        role.RoleID,
+                        isSelected ? @"checked=""checked""" : "",
+                        role.RoleName
+                        );
+                }
+            }
+
+            litViewPermissions.Text = viewPermissionsRolesUi.ToString();   
+        }
+
+        private string ParseViewPermissionInfoFromPost()
+        {
+            //toSave.CheckoutAssignRoleIds = chklAssignRoleIds.GetSelectedValues().ToCsv();     
+
+            string[] checkedRoleIds = Request.Form.GetValues("viewPermissionRole") ?? new string[] { };
+
+            return string.Join(",", checkedRoleIds.ToArray());
         }
 
         private void SaveSlide(int? slideId)
@@ -155,7 +222,9 @@ namespace DNNspot.Rotator
             slide.CustomField2 = txtCustomField2.Text == DefaultDnnEditorCrap ? txtCustomField2.Text.Replace(DefaultDnnEditorCrap, "") : txtCustomField2.Text;
             slide.CustomField3 = txtCustomField3.Text == DefaultDnnEditorCrap ? txtCustomField3.Text.Replace(DefaultDnnEditorCrap, "") : txtCustomField3.Text;
             slide.IsVisible = chkVisible.Checked;
+
             slide.ModifiedDate = DateTime.Now;
+            slide.ViewPermissions = ParseViewPermissionInfoFromPost();
             slide.Save();
         }
 

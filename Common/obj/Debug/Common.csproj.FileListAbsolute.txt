@@ -27,6 +27,6 @@ C:\Code\DNNspot-Rotator\Common\bin\Debug\EntitySpaces.DynamicQuery.dll
 C:\Code\DNNspot-Rotator\Common\bin\Debug\EntitySpaces.Interfaces.dll
 C:\Code\DNNspot-Rotator\Common\bin\Debug\EntitySpaces.LoaderMT.dll
 C:\Code\DNNspot-Rotator\Common\bin\Debug\EntitySpaces.SqlClientProvider.dll
-C:\Code\DNNspot-Rotator\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 C:\Code\DNNspot-Rotator\Common\obj\Debug\DNNspot.Rotator.Common.dll
 C:\Code\DNNspot-Rotator\Common\obj\Debug\DNNspot.Rotator.Common.pdb
+C:\Code\DNNspot-Rotator\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache

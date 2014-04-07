@@ -52,7 +52,7 @@
       <Item value="ModulePath" priority="0" />
       <Item value="Response" priority="0" />
       <Item value="txtThumbnail" priority="4" />
-      <Item value="slide" priority="12" />
+      <Item value="slide" priority="15" />
       <Item value="jsString" priority="1" />
       <Item value="HttpUtility`0" priority="0" />
       <Item value="Server" priority="0" />
@@ -120,6 +120,7 @@
       <Item value="template" priority="3" />
       <Item value="DefaultDnnEditorCrap" priority="0" />
       <Item value="slideTemplate" priority="0" />
+      <Item value="ParseViewPermissionInfoFromPost`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.String">
       <Item value="IsNullOrEmpty`0" priority="4" />
@@ -179,6 +180,7 @@
       <Item value="CustomField2" priority="2" />
       <Item value="CustomField3" priority="2" />
       <Item value="CustomField1" priority="2" />
+      <Item value="ViewPermissions" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Text.StringBuilder">
       <Item value="Append`0" priority="9" />
@@ -239,32 +241,16 @@
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx" caret="10054" fromTop="12" />
       <File id="8FB51F0E-4C71-4115-A237-19BD65F056BC/d:Generated/f:Slide.cs" caret="918" fromTop="0" />
       <File id="8FB51F0E-4C71-4115-A237-19BD65F056BC/d:Custom/f:Slide.cs" caret="0" fromTop="0" />
-      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:Constants.cs" caret="0" fromTop="0" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="933" fromTop="18" />
-      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:ModuleBase.cs" caret="3800" fromTop="42" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="5667" fromTop="30" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx.cs" caret="3870" fromTop="21" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx" caret="1249" fromTop="25" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="24104" fromTop="24" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="15481" fromTop="19" />
+      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:ModuleBase.cs" caret="3635" fromTop="79" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="1588" fromTop="34" />
+      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:Constants.cs" caret="0" fromTop="0" />
+      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:Extensions.cs" caret="774" fromTop="27" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="4871" fromTop="0" />
     </RecentFiles>
     <RecentEdits>
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="26433" fromTop="29" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="26433" fromTop="28" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="26433" fromTop="31" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="26433" fromTop="35" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="26433" fromTop="26" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="26433" fromTop="34" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx.cs" caret="1679" fromTop="39" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx.cs" caret="3807" fromTop="19" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx" caret="1445" fromTop="23" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx" caret="2321" fromTop="43" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx" caret="2310" fromTop="40" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="26433" fromTop="28" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="26433" fromTop="15" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="26433" fromTop="37" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="26433" fromTop="31" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="26433" fromTop="28" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="26433" fromTop="608" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="26433" fromTop="45" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="21482" fromTop="46" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="22235" fromTop="42" />
@@ -273,11 +259,28 @@
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="25842" fromTop="36" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="25436" fromTop="31" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx" caret="703" fromTop="16" />
-      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:ModuleBase.cs" caret="3800" fromTop="42" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="5765" fromTop="30" />
+      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:ModuleBase.cs" caret="3835" fromTop="42" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx.cs" caret="4350" fromTop="36" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx" caret="1249" fromTop="25" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="24434" fromTop="29" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="1902" fromTop="47" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="2793" fromTop="34" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="1588" fromTop="34" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="4755" fromTop="53" />
+      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:ModuleBase.cs" caret="3635" fromTop="47" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="15481" fromTop="19" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="15481" fromTop="19" />
+      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:ModuleBase.cs" caret="3644" fromTop="79" />
+      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:Extensions.cs" caret="269" fromTop="10" />
+      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:Extensions.cs" caret="774" fromTop="27" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="7224" fromTop="24" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="6871" fromTop="16" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="8648" fromTop="51" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="6858" fromTop="53" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="3954" fromTop="24" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="4177" fromTop="31" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="5680" fromTop="33" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="4865" fromTop="16" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>

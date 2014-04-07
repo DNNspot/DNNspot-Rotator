@@ -384,7 +384,7 @@ namespace DNNspot.Rotator
             var slides = new SlideCollection();
             slides.Load(q);
 
-            return slides.ToList();
+            return slides.Where(s => s.IsViewable).ToList();
         }
 
         private void IncludeJS()
