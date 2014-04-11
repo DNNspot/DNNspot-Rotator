@@ -2,3 +2,5 @@
 
 
 <asp:Literal ID="litOutput" runat="server"></asp:Literal>
+<asp:Literal ID="litJSOutput" runat="server"></asp:Literal>
+

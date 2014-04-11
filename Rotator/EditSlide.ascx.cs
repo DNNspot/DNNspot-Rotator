@@ -120,13 +120,14 @@ namespace DNNspot.Rotator
             bool isSelected = false;
 
 
+            var slide = new Slide();
+
             if (_slideId == null)
             {
                 btnDelete.Visible = false;
             }
             else
             {
-                var slide = new Slide();
                 slide.LoadByPrimaryKey(Convert.ToInt32(_slideId));
 
                 txtTitle.Text = slide.Title;
@@ -136,15 +137,16 @@ namespace DNNspot.Rotator
                 txtCustomField2.Text = slide.CustomField2;
                 txtCustomField3.Text = slide.CustomField3;
                 chkVisible.Checked = Convert.ToBoolean(slide.IsVisible);
-                
-                if (!String.IsNullOrEmpty(slide.ViewPermissions))
-                {
-                    viewPermission = slide.ViewPermissions.ToListOfInt(',');
-                }
+            }
 
-                isSelected = viewPermission.Any(a => a == -1);
+            if (!String.IsNullOrEmpty(slide.ViewPermissions))
+            {
+                viewPermission = slide.ViewPermissions.ToListOfInt(',');
+            }
 
-                viewPermissionsRolesUi.AppendFormat(@"
+            isSelected = viewPermission.Any(a => a == -1);
+
+            viewPermissionsRolesUi.AppendFormat(@"
                     <tr>
                         <td>
                             <input type=""checkbox"" id=""viewPermissionId-{0}"" name=""viewPermissionRole"" value=""{0}"" {1} />
@@ -152,11 +154,10 @@ namespace DNNspot.Rotator
                         </td>
                     </tr>
                 ",
-                 -1,
-                 isSelected ? @"checked=""checked""" : "",
-                 "All Users"
-                );
-            }
+             -1,
+             isSelected ? @"checked=""checked""" : "",
+             "All Users"
+            );
 
 
             RoleController roleController = new RoleController();

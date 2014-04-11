@@ -143,99 +143,99 @@ namespace DNNspot.Rotator
 
         private void GenerateJavascript()
         {
-            //var jsString = new StringBuilder();
+            if (_hasPausePlayButton)
+            {
+                var jsString = new StringBuilder();
 
-            //if (_hasPager)
-            //{
-            //    jsString.Append(String.Format("function slides_{0}_pagerAnchorBuilder(idx, slide) {{ ", ModuleId));
+                //if (_hasPager)
+                //{
+                //    jsString.Append(String.Format("function slides_{0}_pagerAnchorBuilder(idx, slide) {{ ", ModuleId));
 
-            //    jsString.Append(
-            //        String.Format(
-            //            "return 'ul#slides_{0}_pager li#slides_{0}_pager_' + idx + ' a'; ",
-            //            ModuleId));
+                //    jsString.Append(
+                //        String.Format(
+                //            "return 'ul#slides_{0}_pager li#slides_{0}_pager_' + idx + ' a'; ",
+                //            ModuleId));
 
 
 
-            //    jsString.Append("} ");
+                //    jsString.Append("} ");
 
-            //    jsString.Append(String.Format("function slides_{0}_updateActivePagerLink(pager, currSlide) {{ ", ModuleId));
-            //    jsString.Append("jQuery(pager).find('li').removeClass('activeSlide').filter('li:eq('+currSlide+')').addClass('activeSlide'); ");
-            //    jsString.Append("jQuery(pager).find('li').removeClass('prevSlide').filter('li:eq('+currSlide+')').prev().addClass('prevSlide'); ");
-            //    jsString.Append("jQuery(pager).find('li').removeClass('nextSlide').filter('li:eq('+currSlide+')').next().addClass('nextSlide'); ");
-            //    jsString.Append("}; ");
-            //}
+                //    jsString.Append(String.Format("function slides_{0}_updateActivePagerLink(pager, currSlide) {{ ", ModuleId));
+                //    jsString.Append("jQuery(pager).find('li').removeClass('activeSlide').filter('li:eq('+currSlide+')').addClass('activeSlide'); ");
+                //    jsString.Append("jQuery(pager).find('li').removeClass('prevSlide').filter('li:eq('+currSlide+')').prev().addClass('prevSlide'); ");
+                //    jsString.Append("jQuery(pager).find('li').removeClass('nextSlide').filter('li:eq('+currSlide+')').next().addClass('nextSlide'); ");
+                //    jsString.Append("}; ");
+                //}
 
-            //jsString.Append("jQuery(function() { ");
-            //jsString.Append(String.Format("jQuery('#slides_{0}').cycle({{", ModuleId));
-            //jsString.Append(String.Format("fx: {0}, ", _transitionEffect));
-            //jsString.Append(String.Format("speedIn: {0}, ", _speedIn));
-            //jsString.Append(String.Format("speedOut: {0}, ", _speedOut));
-            //jsString.Append(String.Format("easeIn: {0}, ", _easeInEffect));
-            //jsString.Append(String.Format("easeOut: {0}, ", _easeOutEffect));
-            //jsString.Append(String.Format("sync: {0}, ", _sync));
-            //jsString.Append(String.Format("timeout: {0}, ", _timeout));
-            //jsString.Append(String.Format("delay: {0}, ", _delay));
-            //jsString.Append(String.Format("pause: {0}, ", _pause));
-            //jsString.Append(String.Format("random: {0}, ", _random));
-            //jsString.Append(String.Format("autostop: {0}, ", _loop));
-            //jsString.Append(String.Format("autostopCount: {0}, ", _numberOfTransitions));
-            //jsString.Append(String.Format("cleartypeNoBg: {0}, ", "true"));
-            //jsString.Append(String.Format("startingSlide: {0}, ", _slideStart));
-            //jsString.Append(String.Format("randomizeEffects: {0}, ", _randomizeTransitions));
-            //jsString.Append(String.Format("height: {0}, ", _height));
+                jsString.Append("jQuery(function() { ");
+                //jsString.Append(String.Format("jQuery('#slides_{0}').cycle({{", ModuleId));
+                //jsString.Append(String.Format("fx: {0}, ", _transitionEffect));
+                //jsString.Append(String.Format("speedIn: {0}, ", _speedIn));
+                //jsString.Append(String.Format("speedOut: {0}, ", _speedOut));
+                //jsString.Append(String.Format("easeIn: {0}, ", _easeInEffect));
+                //jsString.Append(String.Format("easeOut: {0}, ", _easeOutEffect));
+                //jsString.Append(String.Format("sync: {0}, ", _sync));
+                //jsString.Append(String.Format("timeout: {0}, ", _timeout));
+                //jsString.Append(String.Format("delay: {0}, ", _delay));
+                //jsString.Append(String.Format("pause: {0}, ", _pause));
+                //jsString.Append(String.Format("random: {0}, ", _random));
+                //jsString.Append(String.Format("autostop: {0}, ", _loop));
+                //jsString.Append(String.Format("autostopCount: {0}, ", _numberOfTransitions));
+                //jsString.Append(String.Format("cleartypeNoBg: {0}, ", "true"));
+                //jsString.Append(String.Format("startingSlide: {0}, ", _slideStart));
+                //jsString.Append(String.Format("randomizeEffects: {0}, ", _randomizeTransitions));
+                //jsString.Append(String.Format("height: {0}, ", _height));
 
-            //if (_hasNextButton)
-            //    jsString.Append(String.Format("next: '#slides_{0}_next', ", ModuleId));
+                //if (_hasNextButton)
+                //    jsString.Append(String.Format("next: '#slides_{0}_next', ", ModuleId));
 
-            //if (_hasPreviousButton)
-            //    jsString.Append(String.Format("prev: '#slides_{0}_prev', ", ModuleId));
+                //if (_hasPreviousButton)
+                //    jsString.Append(String.Format("prev: '#slides_{0}_prev', ", ModuleId));
 
-            //if (_hasPager)
-            //{
-            //    jsString.Append(String.Format("pager: '#slides_{0}_pager', ", ModuleId));
-            //    jsString.Append(String.Format("pagerAnchorBuilder: slides_{0}_pagerAnchorBuilder, ", ModuleId));
-            //    jsString.Append(String.Format("updateActivePagerLink: slides_{0}_updateActivePagerLink, ", ModuleId));
-            //}
+                //if (_hasPager)
+                //{
+                //    jsString.Append(String.Format("pager: '#slides_{0}_pager', ", ModuleId));
+                //    jsString.Append(String.Format("pagerAnchorBuilder: slides_{0}_pagerAnchorBuilder, ", ModuleId));
+                //    jsString.Append(String.Format("updateActivePagerLink: slides_{0}_updateActivePagerLink, ", ModuleId));
+                //}
 
-            //jsString.Append("cleartype: 1");
-            //jsString.Append("}); ");
+                //jsString.Append("cleartype: 1");
+                //jsString.Append("}); ");
 
-            //if (_hasPager)
-            //{
-            //    jsString.Append(string.Format("jQuery('#slides_{0}_pager li:first').addClass('firstSlide'); ", ModuleId));
-            //    jsString.Append(string.Format("jQuery('#slides_{0}_pager li:last').addClass('lastSlide'); ", ModuleId));
-            //}
+                //if (_hasPager)
+                //{
+                //    jsString.Append(string.Format("jQuery('#slides_{0}_pager li:first').addClass('firstSlide'); ", ModuleId));
+                //    jsString.Append(string.Format("jQuery('#slides_{0}_pager li:last').addClass('lastSlide'); ", ModuleId));
+                //}
 
-            //if (_hasPauseButton)
-            //{
-            //    jsString.Append(string.Format("jQuery('#slides_{0}_pause_button').click(function() {{ ", ModuleId));
-            //    jsString.Append(string.Format("jQuery('#slides_{0}').cycle('pause'); ", ModuleId));
-            //    jsString.Append("}); ");
-            //}
+                //if (_hasPauseButton)
+                //{
+                //    jsString.Append(string.Format("jQuery('#slides_{0}_pause_button').click(function() {{ ", ModuleId));
+                //    jsString.Append(string.Format("jQuery('#slides_{0}').cycle('pause'); ", ModuleId));
+                //    jsString.Append("}); ");
+                //}
 
-            //if (_hasPlayButton)
-            //{
-            //    jsString.Append(string.Format("jQuery('#slides_{0}_play_button').click(function() {{ ", ModuleId));
-            //    jsString.Append(string.Format("jQuery('#slides_{0}').cycle('resume'); ", ModuleId));
-            //    jsString.Append("}); ");
-            //}
+                //if (_hasPlayButton)
+                //{
+                //    jsString.Append(string.Format("jQuery('#slides_{0}_play_button').click(function() {{ ", ModuleId));
+                //    jsString.Append(string.Format("jQuery('#slides_{0}').cycle('resume'); ", ModuleId));
+                //    jsString.Append("}); ");
+                //}
 
-            //if (_hasPausePlayButton)
-            //{
-            //    jsString.Append(string.Format("jQuery('#slides_{0}_pauseplay_button').click(function() {{ ", ModuleId));
-            //    jsString.Append("if(jQuery(this).hasClass('pause')) { ");
-            //    jsString.Append("jQuery(this).removeClass('pause').addClass('resume').text('Play'); ");
-            //    jsString.Append(string.Format("jQuery('#slides_{0}').cycle('pause'); ", ModuleId));
-            //    jsString.Append("} else if(jQuery(this).hasClass('resume')) { ");
-            //    jsString.Append("jQuery(this).removeClass('resume').addClass('pause').text('Pause'); ");
-            //    jsString.Append(string.Format("jQuery('#slides_{0}').cycle('resume'); ", ModuleId));
-            //    jsString.Append("} ");
-            //    jsString.Append("}); ");
-            //}
+                jsString.Append(string.Format("jQuery('#slides_{0}_pauseplay_button').click(function() {{ ", ModuleId));
+                jsString.Append("if(jQuery(this).hasClass('pause')) { ");
+                jsString.Append("jQuery(this).removeClass('pause').addClass('resume').text('Play'); ");
+                jsString.Append(string.Format("jQuery('#slides_{0}').cycle('pause'); ", ModuleId));
+                jsString.Append("} else if(jQuery(this).hasClass('resume')) { ");
+                jsString.Append("jQuery(this).removeClass('resume').addClass('pause').text('Pause'); ");
+                jsString.Append(string.Format("jQuery('#slides_{0}').cycle('resume'); ", ModuleId));
+                jsString.Append("} ");
+                jsString.Append("}); ");
 
-            //jsString.Append("}); ");
+                jsString.Append("}); ");
 
-            //litJSOutput.Text = String.Format("<script type=\"text/javascript\">{0}</script>", jsString);
+                litJSOutput.Text = String.Format("<script type=\"text/javascript\">{0}</script>", jsString);
+            }
         }
 
         private string GenerateNext()
@@ -416,7 +416,7 @@ namespace DNNspot.Rotator
                 case "carousel":
                     RegisterJavascriptFileOnceInBody(jsCarousel, String.Format("{0}{1}js/jquery.cycle2.carousel.min.js", Globals.ApplicationPath, ModuleWebPath));
                     break;
-                
+
                 case "flipHorz":
                     RegisterJavascriptFileOnceInBody(jsFlip, String.Format("{0}{1}js/jquery.cycle2.flip.min.js", Globals.ApplicationPath, ModuleWebPath));
                     break;
