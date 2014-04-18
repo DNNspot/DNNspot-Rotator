@@ -316,7 +316,7 @@ namespace DNNspot.Rotator
         {
             var output = new StringBuilder();
 
-            output.Append(String.Format("<div id='slides_{0}' ", ModuleId));
+            output.Append(String.Format("<div style='visibility:hidden;' id='slides_{0}' ", ModuleId));
             output.Append("class='cycle-slideshow' "); // AUTO-INITIALIZE
             output.Append("data-cycle-slides='> div.slide' "); // SELECT SLIDES
             output.Append("data-cycle-log='false' "); // SHUT OFF CONSOLE LOGGING

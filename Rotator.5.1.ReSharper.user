@@ -122,6 +122,7 @@
       <Item value="slideTemplate" priority="0" />
       <Item value="ParseViewPermissionInfoFromPost`0" priority="0" />
       <Item value="s" priority="0" />
+      <Item value="DisplayMode`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.String">
       <Item value="IsNullOrEmpty`0" priority="4" />
@@ -253,24 +254,17 @@
       <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:ModuleBase.cs" caret="3635" fromTop="79" />
       <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:Constants.cs" caret="0" fromTop="0" />
       <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:Extensions.cs" caret="774" fromTop="27" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="15353" fromTop="14" />
       <File id="8FB51F0E-4C71-4115-A237-19BD65F056BC/d:Custom/f:Slide.cs" caret="0" fromTop="0" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="647" fromTop="5" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="4217" fromTop="12" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="4313" fromTop="16" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx" caret="241" fromTop="5" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="12789" fromTop="16" />
     </RecentFiles>
     <RecentEdits>
-      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:Extensions.cs" caret="774" fromTop="27" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="7166" fromTop="24" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="6813" fromTop="16" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="8590" fromTop="51" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="6800" fromTop="53" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="3954" fromTop="24" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="4827" fromTop="33" />
-      <File id="8FB51F0E-4C71-4115-A237-19BD65F056BC/d:Custom/f:Slide.cs" caret="966" fromTop="25" />
       <File id="8FB51F0E-4C71-4115-A237-19BD65F056BC/d:Custom/f:Slide.cs" caret="1068" fromTop="28" />
       <File id="8FB51F0E-4C71-4115-A237-19BD65F056BC/d:Custom/f:Slide.cs" caret="2079" fromTop="58" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="15299" fromTop="12" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="15467" fromTop="18" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="17767" fromTop="12" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="17767" fromTop="18" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="2803" fromTop="13" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="2803" fromTop="18" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="2803" fromTop="22" />
@@ -289,6 +283,14 @@
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="5637" fromTop="47" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="4359" fromTop="16" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="4217" fromTop="12" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="17767" fromTop="18" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx" caret="241" fromTop="5" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="17767" fromTop="29" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="4655" fromTop="20" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="17767" fromTop="35" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="17767" fromTop="40" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="10105" fromTop="41" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="12789" fromTop="16" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
