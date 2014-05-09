@@ -257,13 +257,12 @@
       <File id="8FB51F0E-4C71-4115-A237-19BD65F056BC/d:Custom/f:Slide.cs" caret="0" fromTop="0" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="647" fromTop="5" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="4313" fromTop="16" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx" caret="241" fromTop="5" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="12789" fromTop="16" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.min.js" caret="26211" fromTop="15" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.ie-fade.min.js" caret="869" fromTop="1" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx" caret="0" fromTop="0" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="18838" fromTop="32" />
     </RecentFiles>
     <RecentEdits>
-      <File id="8FB51F0E-4C71-4115-A237-19BD65F056BC/d:Custom/f:Slide.cs" caret="1068" fromTop="28" />
-      <File id="8FB51F0E-4C71-4115-A237-19BD65F056BC/d:Custom/f:Slide.cs" caret="2079" fromTop="58" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="17767" fromTop="12" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="17767" fromTop="18" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="2803" fromTop="13" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="2803" fromTop="18" />
@@ -291,6 +290,9 @@
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="17767" fromTop="40" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="10105" fromTop="41" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="12789" fromTop="16" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.min.js" caret="26211" fromTop="15" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.ie-fade.min.js" caret="1019" fromTop="1" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="18838" fromTop="32" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>

@@ -29,4 +29,3 @@ C:\Code\DNNspot-Rotator\Common\bin\Debug\EntitySpaces.LoaderMT.dll
 C:\Code\DNNspot-Rotator\Common\bin\Debug\EntitySpaces.SqlClientProvider.dll
 C:\Code\DNNspot-Rotator\Common\obj\Debug\DNNspot.Rotator.Common.dll
 C:\Code\DNNspot-Rotator\Common\obj\Debug\DNNspot.Rotator.Common.pdb
-C:\Code\DNNspot-Rotator\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache

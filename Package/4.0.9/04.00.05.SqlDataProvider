@@ -1,0 +1,7 @@
+ALTER TABLE {databaseOwner}[{objectQualifier}DNNspot_Rotator_Slides]
+ADD [ViewPermissions] [varchar](150) NULL Default('-1')
+
+GO
+
+UPDATE {databaseOwner}[{objectQualifier}DNNspot_Rotator_Slides]
+SET [ViewPermissions] = '-1'

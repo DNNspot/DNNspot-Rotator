@@ -8,7 +8,7 @@
     <br />
     <br />
     Body<br />
-    <dnn:TextEditor id="txtBody" runat="server" height="1750" width="100%" HtmlEncode="false">
+    <dnn:TextEditor id="txtBody" runat="server" height="550" width="100%" HtmlEncode="false">
     </dnn:TextEditor><br />
     <br />
     Pager Text (default is slide title)s<br />
@@ -18,36 +18,44 @@
         Visible<br />
         <asp:CheckBox ID="chkVisible" runat="server" Checked="true" /><br />
     </p>
-    <h4 class="customFieldTitle">
-        Custom Fields (click to view)</h4>
-    <div class="customFields" style="display: none;">
-        Custom Field 1<br />
-        <dnn:TextEditor id="txtCustomField1" runat="server" height="550" width="100%" HtmlEncode="false">
-        </dnn:TextEditor><br />
-        <br />
-        Custom Field 2<br />
-        <dnn:TextEditor id="txtCustomField2" runat="server" height="550" width="100%" HtmlEncode="false">
-        </dnn:TextEditor><br />
-        <br />
-        Custom Field 3<br />
-        <dnn:TextEditor id="txtCustomField3" runat="server" height="550" width="100%" HtmlEncode="false">
-        </dnn:TextEditor><br />
-        <br />
+    <div id="dnnEditExtension">
+        <h2 class="dnnFormSectionHead">
+            <a href="javascript:void(0);">Custom Fields</a></h2>
+        <fieldset>
+            <div class="customFields">
+                Custom Field 1<br />
+                <dnn:TextEditor id="txtCustomField1" runat="server" height="550" width="100%" HtmlEncode="false">
+                </dnn:TextEditor><br />
+                <br />
+                Custom Field 2<br />
+                <dnn:TextEditor id="txtCustomField2" runat="server" height="550" width="100%" HtmlEncode="false">
+                </dnn:TextEditor><br />
+                <br />
+                Custom Field 3<br />
+                <dnn:TextEditor id="txtCustomField3" runat="server" height="550" width="100%" HtmlEncode="false">
+                </dnn:TextEditor><br />
+                <br />
+            </div>
+        </fieldset>
+        <h2 class="dnnFormSectionHead">
+            <a href="javascript:void(0);">View Permissions</a></h2>
+        <fieldset>
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            Role
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <asp:Literal ID="litViewPermissions" runat="server"></asp:Literal>
+                </tbody>
+            </table>
+        </fieldset>
     </div>
-    <h4>
-        View Permissions</h4>
-    <table>
-        <thead>
-            <tr>
-                <th>
-                    Role
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <asp:Literal ID="litViewPermissions" runat="server"></asp:Literal>
-        </tbody>
-    </table>
+    <br />
+    <br />
     <br />
     <br />
     <asp:Button ID="btnSave" runat="server" OnClick="btnSave_Click" CssClass="dnnPrimaryAction"
@@ -60,9 +68,17 @@
 </div>
 <script type="text/javascript">
     jQuery(document).ready(function () {
-        jQuery(".customFieldTitle").click(function () {
-            jQuery(".customFields").toggle();
-        });
+        (function ($) {
+            if ($.isFunction($.fn.dnnPanels)) {
+                $('#dnnEditExtension').dnnPanels({
+                    cookieDays: 0, // cookie state persistence time in days
+                    cookieMilleseconds: 0
+                });
+
+                $('#dnnEditExtension fieldset').hide();
+                $('#dnnEditExtension h2:nth-child(1) a').removeClass('dnnSectionExpanded');
+            }
+        })(jQuery);
     });
 
 </script>

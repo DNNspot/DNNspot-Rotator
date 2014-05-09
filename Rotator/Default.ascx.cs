@@ -434,7 +434,7 @@ namespace DNNspot.Rotator
                     break;
 
                 default:
-                    RegisterJavascriptFileOnceInBody(jsIEFade, String.Format("{0}{1}js/jquery.cycle2.ie-fade.min.js", Globals.ApplicationPath, ModuleWebPath));
+                    //RegisterJavascriptFileOnceInBody(jsIEFade, String.Format("{0}{1}js/jquery.cycle2.ie-fade.min.js", Globals.ApplicationPath, ModuleWebPath));
                     break;
             }
         }

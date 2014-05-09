@@ -125,6 +125,7 @@ namespace DNNspot.Rotator
             if (_slideId == null)
             {
                 btnDelete.Visible = false;
+
             }
             else
             {
@@ -155,7 +156,7 @@ namespace DNNspot.Rotator
                     </tr>
                 ",
              -1,
-             isSelected ? @"checked=""checked""" : "",
+             (isSelected || _slideId == null) ? @"checked=""checked""" : "",
              "All Users"
             );
 
