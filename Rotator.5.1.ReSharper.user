@@ -123,6 +123,7 @@
       <Item value="ParseViewPermissionInfoFromPost`0" priority="0" />
       <Item value="s" priority="0" />
       <Item value="DisplayMode`0" priority="0" />
+      <Item value="_slideId" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.String">
       <Item value="IsNullOrEmpty`0" priority="4" />
@@ -244,55 +245,25 @@
   <RecentFiles>
     <RecentFiles>
       <File id="8FB51F0E-4C71-4115-A237-19BD65F056BC/d:Generated/f:Template.cs" caret="0" fromTop="0" />
+      <File id="8FB51F0E-4C71-4115-A237-19BD65F056BC/d:Generated/f:Slide.cs" caret="918" fromTop="0" />
+      <File id="8FB51F0E-4C71-4115-A237-19BD65F056BC/d:Custom/f:Slide.cs" caret="0" fromTop="0" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.carousel.min.js" caret="0" fromTop="0" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.flip.min.js" caret="0" fromTop="0" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.scrollVert.min.js" caret="0" fromTop="0" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx.cs" caret="3113" fromTop="10" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx" caret="10054" fromTop="12" />
-      <File id="8FB51F0E-4C71-4115-A237-19BD65F056BC/d:Generated/f:Slide.cs" caret="918" fromTop="0" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx.cs" caret="3870" fromTop="21" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditTemplate.ascx" caret="1249" fromTop="25" />
-      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:ModuleBase.cs" caret="3635" fromTop="79" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.shuffle.min.js" caret="0" fromTop="0" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.tile.min.js" caret="0" fromTop="0" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.center.min.js" caret="0" fromTop="0" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.swipe.min.js" caret="0" fromTop="0" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.video.min.js" caret="1618" fromTop="1" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.caption2.min.js" caret="0" fromTop="0" />
+      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:ModuleBase.cs" caret="3889" fromTop="8" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx.cs" caret="5833" fromTop="15" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="14700" fromTop="0" />
       <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:Constants.cs" caret="0" fromTop="0" />
-      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:Extensions.cs" caret="774" fromTop="27" />
-      <File id="8FB51F0E-4C71-4115-A237-19BD65F056BC/d:Custom/f:Slide.cs" caret="0" fromTop="0" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="647" fromTop="5" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="4313" fromTop="16" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.min.js" caret="26211" fromTop="15" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.ie-fade.min.js" caret="869" fromTop="1" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx" caret="0" fromTop="0" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="18838" fromTop="32" />
+      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:Extensions.cs" caret="0" fromTop="0" />
     </RecentFiles>
     <RecentEdits>
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="17767" fromTop="18" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="2803" fromTop="13" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="2803" fromTop="18" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="2803" fromTop="22" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="618" fromTop="10" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="2803" fromTop="18" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="2803" fromTop="30" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="2803" fromTop="32" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="2803" fromTop="43" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="2766" fromTop="42" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="1717" fromTop="16" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="2587" fromTop="28" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="2031" fromTop="21" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="857" fromTop="15" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="1690" fromTop="36" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx" caret="1050" fromTop="15" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="5637" fromTop="47" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="4359" fromTop="16" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:EditSlide.ascx.cs" caret="4217" fromTop="12" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="17767" fromTop="18" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx" caret="241" fromTop="5" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="17767" fromTop="29" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="4655" fromTop="20" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="17767" fromTop="35" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="17767" fromTop="40" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="10105" fromTop="41" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="12789" fromTop="16" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.min.js" caret="26211" fromTop="15" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.ie-fade.min.js" caret="1019" fromTop="1" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="18838" fromTop="32" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.video.min.js" caret="1618" fromTop="1" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>

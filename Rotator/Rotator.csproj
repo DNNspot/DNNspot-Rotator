@@ -197,9 +197,9 @@
     <!-- We copy all the project content files to our website directories. -->
     <Copy SourceFiles="@(Content)" DestinationFiles="@(Content -> '$(DNNDirectory)\DesktopModules\$(ModuleFolder)\%(Identity)')" SkipUnchangedFiles="true" />
     <Copy SourceFiles="@(ModuleAssemblies);@(ModuleDebug)" DestinationFolder="$(DNNDirectory)\bin" />
-	
+	<!--
     <Copy SourceFiles="@(Content)" DestinationFiles="@(Content -> '$(StagingDirectory)\DesktopModules\$(ModuleFolder)\%(Identity)')" SkipUnchangedFiles="true" />
-    <Copy SourceFiles="@(ModuleAssemblies);@(ModuleDebug)" DestinationFolder="$(StagingDirectory)\bin" />
+    <Copy SourceFiles="@(ModuleAssemblies);@(ModuleDebug)" DestinationFolder="$(StagingDirectory)\bin" />-->
   </Target>
   <ProjectExtensions>
     <VisualStudio>

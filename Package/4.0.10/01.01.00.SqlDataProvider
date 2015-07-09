@@ -1,0 +1,54 @@
+IF NOT EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE' AND TABLE_NAME='{objectQualifier}DNNspot_Rotator_Slides')
+BEGIN
+	CREATE TABLE {databaseOwner}{objectQualifier}DNNspot_Rotator_Slides(
+		[ID] [int] IDENTITY(1,1) NOT NULL,
+		[PortalID] [int] NULL,
+		[ModuleID] [int] NULL,
+		[Title] [nvarchar](50) NULL,
+		[Body] [nvarchar](max) NULL,
+		[IsVisible] [bit] NULL,
+		[DisplayOrder] [int] NULL,
+		[CreatedDate] [datetime] NULL,
+		[ModifiedDate] [datetime] NULL,
+	 CONSTRAINT [PK_{objectQualifier}DNNspot_Rotator_Slides] PRIMARY KEY CLUSTERED 
+	(
+		[ID] ASC
+	)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+	) ON [PRIMARY]
+
+END
+
+
+
+IF NOT EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE' AND TABLE_NAME='{objectQualifier}DNNspot_Rotator_Templates')
+BEGIN
+	CREATE TABLE {databaseOwner}{objectQualifier}DNNspot_Rotator_Templates(
+		[ID] [int] IDENTITY(1,1) NOT NULL,
+		[PortalID] [int] NULL,
+		[ModuleID] [int] NULL,
+		[Title] [nvarchar](50) NULL,
+		[Body] [nvarchar](max) NULL,
+		[CreatedDate] [datetime] NULL,
+		[ModifiedDate] [datetime] NULL,
+	 CONSTRAINT [PK_{objectQualifier}DNNspot_Rotator_Templates] PRIMARY KEY CLUSTERED 
+	(
+		[ID] ASC
+	)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+	) ON [PRIMARY]
+END 
+
+
+
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[DF_{objectQualifier}DNNspot_Rotator_Templates_CreatedDate]') AND type in (N'U'))
+BEGIN
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNspot_Rotator_Templates ADD  CONSTRAINT [DF_{objectQualifier}DNNspot_Rotator_Templates_CreatedDate]  DEFAULT (getdate()) FOR [CreatedDate]
+END
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[DF_{objectQualifier}DNNspot_Rotator_Slides_CreatedDate]') AND type in (N'U'))
+BEGIN
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNspot_Rotator_Slides ADD CONSTRAINT [DF_{objectQualifier}DNNspot_Rotator_Slides_CreatedDate] DEFAULT (getdate()) FOR [CreatedDate]
+END
+
+
+

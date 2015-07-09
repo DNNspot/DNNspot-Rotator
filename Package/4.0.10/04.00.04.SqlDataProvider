@@ -1,0 +1,2 @@
+ALTER TABLE {databaseOwner}[{objectQualifier}DNNspot_Rotator_Templates]
+ADD [SlideTemplate] [nvarchar](max) null

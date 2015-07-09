@@ -1,0 +1,3 @@
+DROP TABLE {databaseOwner}{objectQualifier}DNNspot_Rotator_Slides
+
+DROP TABLE {databaseOwner}{objectQualifier}DNNspot_Rotator_Templates

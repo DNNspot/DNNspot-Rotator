@@ -147,80 +147,7 @@ namespace DNNspot.Rotator
             {
                 var jsString = new StringBuilder();
 
-                //if (_hasPager)
-                //{
-                //    jsString.Append(String.Format("function slides_{0}_pagerAnchorBuilder(idx, slide) {{ ", ModuleId));
-
-                //    jsString.Append(
-                //        String.Format(
-                //            "return 'ul#slides_{0}_pager li#slides_{0}_pager_' + idx + ' a'; ",
-                //            ModuleId));
-
-
-
-                //    jsString.Append("} ");
-
-                //    jsString.Append(String.Format("function slides_{0}_updateActivePagerLink(pager, currSlide) {{ ", ModuleId));
-                //    jsString.Append("jQuery(pager).find('li').removeClass('activeSlide').filter('li:eq('+currSlide+')').addClass('activeSlide'); ");
-                //    jsString.Append("jQuery(pager).find('li').removeClass('prevSlide').filter('li:eq('+currSlide+')').prev().addClass('prevSlide'); ");
-                //    jsString.Append("jQuery(pager).find('li').removeClass('nextSlide').filter('li:eq('+currSlide+')').next().addClass('nextSlide'); ");
-                //    jsString.Append("}; ");
-                //}
-
                 jsString.Append("jQuery(function() { ");
-                //jsString.Append(String.Format("jQuery('#slides_{0}').cycle({{", ModuleId));
-                //jsString.Append(String.Format("fx: {0}, ", _transitionEffect));
-                //jsString.Append(String.Format("speedIn: {0}, ", _speedIn));
-                //jsString.Append(String.Format("speedOut: {0}, ", _speedOut));
-                //jsString.Append(String.Format("easeIn: {0}, ", _easeInEffect));
-                //jsString.Append(String.Format("easeOut: {0}, ", _easeOutEffect));
-                //jsString.Append(String.Format("sync: {0}, ", _sync));
-                //jsString.Append(String.Format("timeout: {0}, ", _timeout));
-                //jsString.Append(String.Format("delay: {0}, ", _delay));
-                //jsString.Append(String.Format("pause: {0}, ", _pause));
-                //jsString.Append(String.Format("random: {0}, ", _random));
-                //jsString.Append(String.Format("autostop: {0}, ", _loop));
-                //jsString.Append(String.Format("autostopCount: {0}, ", _numberOfTransitions));
-                //jsString.Append(String.Format("cleartypeNoBg: {0}, ", "true"));
-                //jsString.Append(String.Format("startingSlide: {0}, ", _slideStart));
-                //jsString.Append(String.Format("randomizeEffects: {0}, ", _randomizeTransitions));
-                //jsString.Append(String.Format("height: {0}, ", _height));
-
-                //if (_hasNextButton)
-                //    jsString.Append(String.Format("next: '#slides_{0}_next', ", ModuleId));
-
-                //if (_hasPreviousButton)
-                //    jsString.Append(String.Format("prev: '#slides_{0}_prev', ", ModuleId));
-
-                //if (_hasPager)
-                //{
-                //    jsString.Append(String.Format("pager: '#slides_{0}_pager', ", ModuleId));
-                //    jsString.Append(String.Format("pagerAnchorBuilder: slides_{0}_pagerAnchorBuilder, ", ModuleId));
-                //    jsString.Append(String.Format("updateActivePagerLink: slides_{0}_updateActivePagerLink, ", ModuleId));
-                //}
-
-                //jsString.Append("cleartype: 1");
-                //jsString.Append("}); ");
-
-                //if (_hasPager)
-                //{
-                //    jsString.Append(string.Format("jQuery('#slides_{0}_pager li:first').addClass('firstSlide'); ", ModuleId));
-                //    jsString.Append(string.Format("jQuery('#slides_{0}_pager li:last').addClass('lastSlide'); ", ModuleId));
-                //}
-
-                //if (_hasPauseButton)
-                //{
-                //    jsString.Append(string.Format("jQuery('#slides_{0}_pause_button').click(function() {{ ", ModuleId));
-                //    jsString.Append(string.Format("jQuery('#slides_{0}').cycle('pause'); ", ModuleId));
-                //    jsString.Append("}); ");
-                //}
-
-                //if (_hasPlayButton)
-                //{
-                //    jsString.Append(string.Format("jQuery('#slides_{0}_play_button').click(function() {{ ", ModuleId));
-                //    jsString.Append(string.Format("jQuery('#slides_{0}').cycle('resume'); ", ModuleId));
-                //    jsString.Append("}); ");
-                //}
 
                 jsString.Append(string.Format("jQuery('#slides_{0}_pauseplay_button').click(function() {{ ", ModuleId));
                 jsString.Append("if(jQuery(this).hasClass('pause')) { ");
@@ -240,7 +167,7 @@ namespace DNNspot.Rotator
 
         private string GenerateNext()
         {
-            return String.Format("<a href='javascript:void(0);' id='slides_{0}_next'>Next</a>", ModuleId);
+            return String.Format("<a href='javascript:void(0);' id='slides_{0}_next' class='slides_{0}_next'>Next</a>", ModuleId);
         }
 
         private void GenerateOutputFromTemplate()
@@ -261,11 +188,11 @@ namespace DNNspot.Rotator
             foreach (Slide slide in _slides)
             {
                 pagerText = String.IsNullOrEmpty(slide.Thumbnail) ? slide.Title : slide.Thumbnail;
-                pager.AppendFormat("<li id=\"slides_{0}_pager_{1}\" class=\"pager_button\"><a href=\"#\">{2}</a></li>", ModuleId, slideNumber - 1, pagerText);
+                pager.AppendFormat("<li id=\"slides_{0}_pager_{1}\" class=\"pager_button slides_{0}_pager_{1}\"><a href=\"#\">{2}</a></li>", ModuleId, slideNumber - 1, pagerText);
                 slideNumber++;
 
             }
-            return String.Format("<ul id='slides_{0}_pager'>{1}</ul>", ModuleId, pager);
+            return String.Format("<ul id='slides_{0}_pager' class='slides_{0}_pager'>{1}</ul>", ModuleId, pager);
         }
 
         private string GeneratePause()
@@ -275,7 +202,7 @@ namespace DNNspot.Rotator
             if (Convert.ToInt32(_timeout) > 0)
             {
                 _hasPauseButton = true;
-                output = string.Format("<a href=\"javascript:void(0);\" id=\"slides_{0}_pause_button\" class=\"pause_button\">Pause</a>", ModuleId);
+                output = string.Format("<a href=\"javascript:void(0);\" id=\"slides_{0}_pause_button\" class=\"pause_button slides_{0}_pause_button\">Pause</a>", ModuleId);
             }
 
             return output;
@@ -288,7 +215,7 @@ namespace DNNspot.Rotator
             if (Convert.ToInt32(_timeout) > 0)
             {
                 _hasPausePlayButton = true;
-                output = string.Format("<a href=\"javascript:void(0);\" id=\"slides_{0}_pauseplay_button\" class=\"pauseplay_button pause\">Pause</a>", ModuleId);
+                output = string.Format("<a href=\"javascript:void(0);\" id=\"slides_{0}_pauseplay_button\" class=\"pauseplay_button pause slides_{0}_pauseplay_button\">Pause</a>", ModuleId);
             }
 
             return output;
@@ -301,7 +228,7 @@ namespace DNNspot.Rotator
             if (Convert.ToInt32(_timeout) > 0)
             {
                 _hasPlayButton = true;
-                output = string.Format("<a href=\"javascript:void(0);\" id=\"slides_{0}_play_button\" class=\"play_button\">Play</a>", ModuleId);
+                output = string.Format("<a href=\"javascript:void(0);\" id=\"slides_{0}_play_button\" class=\"play_button slides_{0}_play_button\">Play</a>", ModuleId);
             }
 
             return output;
@@ -309,7 +236,7 @@ namespace DNNspot.Rotator
 
         private string GeneratePrev()
         {
-            return String.Format("<a href='javascript:void(0);' id='slides_{0}_prev'>Previous</a>", ModuleId);
+            return String.Format("<a href='javascript:void(0);' id='slides_{0}_prev' class='slides_{0}_prev'>Previous</a>", ModuleId);
         }
 
         private string GenerateSlides(Template template)
@@ -338,18 +265,18 @@ namespace DNNspot.Rotator
 
             if (_hasPager)
             {
-                output.AppendFormat("data-cycle-pager='#slides_{0}_pager' ", ModuleId);
+                output.AppendFormat("data-cycle-pager='.slides_{0}_pager' ", ModuleId);
                 output.Append("data-cycle-pager-template='' ");
             }
 
             if (_hasPreviousButton)
             {
-                output.AppendFormat("data-cycle-prev='#slides_{0}_prev' ", ModuleId);
+                output.AppendFormat("data-cycle-prev='.slides_{0}_prev' ", ModuleId);
             }
 
             if (_hasNextButton)
             {
-                output.AppendFormat("data-cycle-next='#slides_{0}_next' ", ModuleId);
+                output.AppendFormat("data-cycle-next='.slides_{0}_next' ", ModuleId);
             }
 
             if (!String.IsNullOrEmpty(_easeInEffect))
