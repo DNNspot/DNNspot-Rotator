@@ -247,23 +247,37 @@
       <File id="8FB51F0E-4C71-4115-A237-19BD65F056BC/d:Generated/f:Template.cs" caret="0" fromTop="0" />
       <File id="8FB51F0E-4C71-4115-A237-19BD65F056BC/d:Generated/f:Slide.cs" caret="918" fromTop="0" />
       <File id="8FB51F0E-4C71-4115-A237-19BD65F056BC/d:Custom/f:Slide.cs" caret="0" fromTop="0" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.carousel.min.js" caret="0" fromTop="0" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.flip.min.js" caret="0" fromTop="0" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.scrollVert.min.js" caret="0" fromTop="0" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.shuffle.min.js" caret="0" fromTop="0" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.tile.min.js" caret="0" fromTop="0" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.center.min.js" caret="0" fromTop="0" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.swipe.min.js" caret="0" fromTop="0" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.video.min.js" caret="1618" fromTop="1" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.caption2.min.js" caret="0" fromTop="0" />
       <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:ModuleBase.cs" caret="3889" fromTop="8" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx.cs" caret="5833" fromTop="15" />
-      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="14700" fromTop="0" />
-      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:Constants.cs" caret="0" fromTop="0" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.tile.min.js" caret="2505" fromTop="1" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.shuffle.min.js" caret="1143" fromTop="1" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.scrollVert.min.js" caret="418" fromTop="1" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.ie-fade.min.js" caret="1019" fromTop="1" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.flip.min.js" caret="1584" fromTop="1" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.center.min.js" caret="1015" fromTop="1" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.carousel.min.js" caret="4945" fromTop="1" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.video.min.js" caret="1527" fromTop="1" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.swipe.min.js" caret="0" fromTop="0" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.caption2.min.js" caret="0" fromTop="0" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.min.js" caret="0" fromTop="0" />
       <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:Extensions.cs" caret="0" fromTop="0" />
+      <File id="D021C381-7764-4D13-B687-EE40A227E3A2/f:Constants.cs" caret="0" fromTop="0" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Settings.ascx.cs" caret="1669" fromTop="8" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:ListSlides.ascx.cs" caret="0" fromTop="0" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:Default.ascx.cs" caret="3015" fromTop="70" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/f:ListSlides.ascx" caret="0" fromTop="0" />
     </RecentFiles>
     <RecentEdits>
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.min.js" caret="26208" fromTop="14" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.tile.min.js" caret="2505" fromTop="1" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.swipe.min.js" caret="1418" fromTop="1" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.shuffle.min.js" caret="1143" fromTop="1" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.scrollVert.min.js" caret="418" fromTop="1" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.ie-fade.min.js" caret="1019" fromTop="1" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.flip.min.js" caret="1584" fromTop="1" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.center.min.js" caret="1015" fromTop="1" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.carousel.min.js" caret="4945" fromTop="1" />
       <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.video.min.js" caret="1618" fromTop="1" />
+      <File id="7419998F-011F-4A60-A411-E210D10C20E1/d:js/f:jquery.cycle2.caption2.min.js" caret="1131" fromTop="1" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>

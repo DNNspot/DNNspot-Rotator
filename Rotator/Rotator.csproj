@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -14,8 +15,9 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
-    <OldToolsVersion>3.5</OldToolsVersion>
-    <UpgradeBackupLocation />
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
     <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -169,16 +171,17 @@
       <Name>DataModel</Name>
     </ProjectReference>
   </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <PropertyGroup>
     <ModuleFolder>DNNspot-Rotator</ModuleFolder>
     <DNNDirectory>C:\inetpub\wwwroot\DNN7</DNNDirectory>
     <StagingDirectory>Z:\Cubic-Defense</StagingDirectory>
-	
-	
-	
-	
     <PostBuildEvent>
     </PostBuildEvent>
   </PropertyGroup>
@@ -197,7 +200,7 @@
     <!-- We copy all the project content files to our website directories. -->
     <Copy SourceFiles="@(Content)" DestinationFiles="@(Content -> '$(DNNDirectory)\DesktopModules\$(ModuleFolder)\%(Identity)')" SkipUnchangedFiles="true" />
     <Copy SourceFiles="@(ModuleAssemblies);@(ModuleDebug)" DestinationFolder="$(DNNDirectory)\bin" />
-	<!--
+    <!--
     <Copy SourceFiles="@(Content)" DestinationFiles="@(Content -> '$(StagingDirectory)\DesktopModules\$(ModuleFolder)\%(Identity)')" SkipUnchangedFiles="true" />
     <Copy SourceFiles="@(ModuleAssemblies);@(ModuleDebug)" DestinationFolder="$(StagingDirectory)\bin" />-->
   </Target>
